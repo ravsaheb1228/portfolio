@@ -30,9 +30,9 @@ export default function AchievementsPage() {
       <div className="space-y-12">
         {/* Education Section */}
         <div className="space-y-6">
-          <div className="flex items-center gap-2 pb-3 border-b border-[var(--border)]">
+          <div className="flex items-center gap-2 pb-3 border-b border-(--border)">
             <GraduationCap className="w-5 h-5 text-blue-500" />
-            <h3 className="text-xl font-bold text-[var(--text-primary)]">
+            <h3 className="text-xl font-bold text-(--text-primary)">
               Formal Education
             </h3>
           </div>
@@ -45,9 +45,9 @@ export default function AchievementsPage() {
 
         {/* Certifications & Milestones */}
         <div className="space-y-6">
-          <div className="flex items-center gap-2 pb-3 border-b border-[var(--border)]">
+          <div className="flex items-center gap-2 pb-3 border-b border-(--border)">
             <Award className="w-5 h-5 text-amber-500" />
-            <h3 className="text-xl font-bold text-[var(--text-primary)]">
+            <h3 className="text-xl font-bold text-(--text-primary)">
               Industry Certifications & Milestones
             </h3>
           </div>
@@ -59,12 +59,12 @@ export default function AchievementsPage() {
         </div>
 
         {/* Callout */}
-        <Card className="p-8 border-[var(--border-strong)] bg-[var(--bg-elevated)] flex flex-col sm:flex-row items-center justify-between gap-6">
+        <Card className="p-8 border-(--border-strong) bg-(--bg-elevated) flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="space-y-1 text-center sm:text-left">
-            <h4 className="text-base font-bold text-[var(--text-primary)]">
+            <h4 className="text-base font-bold text-(--text-primary)">
               Looking for a verified developer with formal Computer Science rigor?
             </h4>
-            <p className="text-xs sm:text-sm text-[var(--text-secondary)]">
+            <p className="text-xs sm:text-sm text-(--text-secondary)">
               Let&apos;s talk about how my academic background and hands-on skills can serve your next project.
             </p>
           </div>

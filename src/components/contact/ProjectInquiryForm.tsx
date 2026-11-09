@@ -69,10 +69,10 @@ export function ProjectInquiryForm() {
         <div className="w-14 h-14 mx-auto rounded-full bg-emerald-500/10 text-emerald-500 flex items-center justify-center">
           <CheckCircle2 className="w-8 h-8" />
         </div>
-        <h3 className="text-xl sm:text-2xl font-bold text-[var(--text-primary)]">
+        <h3 className="text-xl sm:text-2xl font-bold text-(--text-primary)">
           Inquiry Successfully Received!
         </h3>
-        <p className="text-sm sm:text-base text-[var(--text-secondary)] max-w-md mx-auto leading-relaxed">
+        <p className="text-sm sm:text-base text-(--text-secondary) max-w-md mx-auto leading-relaxed">
           Thank you for sharing your project vision. Ravsaheb will personally review your
           requirements and get in touch within 24 hours.
         </p>
@@ -92,19 +92,19 @@ export function ProjectInquiryForm() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="p-6 sm:p-8 rounded-2xl border border-[var(--border)] bg-[var(--bg-surface)] shadow-xl space-y-5"
+      className="p-6 sm:p-8 rounded-2xl border border-(--border) bg-(--bg-surface) shadow-xl space-y-5"
       noValidate
     >
-      <div className="flex items-center justify-between pb-2 border-b border-[var(--border)]">
+      <div className="flex items-center justify-between pb-2 border-b border-(--border)">
         <div>
-          <h3 className="text-lg font-bold text-[var(--text-primary)]">
+          <h3 className="text-lg font-bold text-(--text-primary)">
             Project Inquiry Form
           </h3>
-          <p className="text-xs text-[var(--text-secondary)]">
+          <p className="text-xs text-(--text-secondary)">
             Tell me about your business goals and technical specifications.
           </p>
         </div>
-        <div className="hidden sm:flex items-center gap-1 text-[11px] font-mono text-[var(--accent)] font-medium">
+        <div className="hidden sm:flex items-center gap-1 text-[11px] font-mono text-(--accent) font-medium">
           <Sparkles className="w-3.5 h-3.5" />
           <span>Prompt Response</span>
         </div>
@@ -123,15 +123,15 @@ export function ProjectInquiryForm() {
       {/* Row 1: Name and Company */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label className="block text-xs font-semibold text-[var(--text-primary)] mb-1.5">
+          <label className="block text-xs font-semibold text-(--text-primary) mb-1.5">
             Full Name <span className="text-rose-500">*</span>
           </label>
           <input
             type="text"
             placeholder="John Doe"
             {...register("fullName")}
-            className={`w-full px-3.5 py-2.5 rounded-lg border text-sm bg-[var(--bg-base)] text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)] ${
-              errors.fullName ? "border-rose-500" : "border-[var(--border)]"
+            className={`w-full px-3.5 py-2.5 rounded-lg border text-sm bg-(--bg-base) text-(--text-primary) placeholder:text-(--text-muted) focus:outline-none focus:ring-2 focus:ring-(--accent) ${
+              errors.fullName ? "border-rose-500" : "border-(--border)"
             }`}
           />
           {errors.fullName && (
@@ -143,15 +143,15 @@ export function ProjectInquiryForm() {
         </div>
 
         <div>
-          <label className="block text-xs font-semibold text-[var(--text-primary)] mb-1.5">
+          <label className="block text-xs font-semibold text-(--text-primary) mb-1.5">
             Company / Business Name <span className="text-rose-500">*</span>
           </label>
           <input
             type="text"
             placeholder="Acme Enterprises"
             {...register("companyName")}
-            className={`w-full px-3.5 py-2.5 rounded-lg border text-sm bg-[var(--bg-base)] text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)] ${
-              errors.companyName ? "border-rose-500" : "border-[var(--border)]"
+            className={`w-full px-3.5 py-2.5 rounded-lg border text-sm bg-(--bg-base) text-(--text-primary) placeholder:text-(--text-muted) focus:outline-none focus:ring-2 focus:ring-(--accent) ${
+              errors.companyName ? "border-rose-500" : "border-(--border)"
             }`}
           />
           {errors.companyName && (
@@ -166,15 +166,15 @@ export function ProjectInquiryForm() {
       {/* Row 2: Email and Phone */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label className="block text-xs font-semibold text-[var(--text-primary)] mb-1.5">
+          <label className="block text-xs font-semibold text-(--text-primary) mb-1.5">
             Email Address <span className="text-rose-500">*</span>
           </label>
           <input
             type="email"
             placeholder="john@company.com"
             {...register("email")}
-            className={`w-full px-3.5 py-2.5 rounded-lg border text-sm bg-[var(--bg-base)] text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)] ${
-              errors.email ? "border-rose-500" : "border-[var(--border)]"
+            className={`w-full px-3.5 py-2.5 rounded-lg border text-sm bg-(--bg-base) text-(--text-primary) placeholder:text-(--text-muted) focus:outline-none focus:ring-2 focus:ring-(--accent) ${
+              errors.email ? "border-rose-500" : "border-(--border)"
             }`}
           />
           {errors.email && (
@@ -186,14 +186,14 @@ export function ProjectInquiryForm() {
         </div>
 
         <div>
-          <label className="block text-xs font-semibold text-[var(--text-primary)] mb-1.5">
-            Phone / WhatsApp <span className="text-[var(--text-muted)] font-normal">(Optional)</span>
+          <label className="block text-xs font-semibold text-(--text-primary) mb-1.5">
+            Phone / WhatsApp <span className="text-(--text-muted) font-normal">(Optional)</span>
           </label>
           <input
             type="tel"
             placeholder="+91 98765 43210"
             {...register("phone")}
-            className="w-full px-3.5 py-2.5 rounded-lg border border-[var(--border)] text-sm bg-[var(--bg-base)] text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
+            className="w-full px-3.5 py-2.5 rounded-lg border border-(--border) text-sm bg-(--bg-base) text-(--text-primary) placeholder:text-(--text-muted) focus:outline-none focus:ring-2 focus:ring-(--accent)"
           />
           {errors.phone && (
             <p className="mt-1 text-xs text-rose-500 flex items-center gap-1">
@@ -207,12 +207,12 @@ export function ProjectInquiryForm() {
       {/* Row 3: Project Category, Budget & Timeline */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div>
-          <label className="block text-xs font-semibold text-[var(--text-primary)] mb-1.5">
+          <label className="block text-xs font-semibold text-(--text-primary) mb-1.5">
             Project Category <span className="text-rose-500">*</span>
           </label>
           <select
             {...register("projectCategory")}
-            className="w-full px-3.5 py-2.5 rounded-lg border border-[var(--border)] text-sm bg-[var(--bg-base)] text-[var(--text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
+            className="w-full px-3.5 py-2.5 rounded-lg border border-(--border) text-sm bg-(--bg-base) text-(--text-primary) focus:outline-none focus:ring-2 focus:ring-(--accent)"
           >
             {projectInquiryCategories.map((cat) => (
               <option key={cat} value={cat}>
@@ -223,12 +223,12 @@ export function ProjectInquiryForm() {
         </div>
 
         <div>
-          <label className="block text-xs font-semibold text-[var(--text-primary)] mb-1.5">
+          <label className="block text-xs font-semibold text-(--text-primary) mb-1.5">
             Budget Range <span className="text-rose-500">*</span>
           </label>
           <select
             {...register("budget")}
-            className="w-full px-3.5 py-2.5 rounded-lg border border-[var(--border)] text-sm bg-[var(--bg-base)] text-[var(--text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
+            className="w-full px-3.5 py-2.5 rounded-lg border border-(--border) text-sm bg-(--bg-base) text-(--text-primary) focus:outline-none focus:ring-2 focus:ring-(--accent)"
           >
             {budgetRanges.map((range) => (
               <option key={range} value={range}>
@@ -239,12 +239,12 @@ export function ProjectInquiryForm() {
         </div>
 
         <div>
-          <label className="block text-xs font-semibold text-[var(--text-primary)] mb-1.5">
+          <label className="block text-xs font-semibold text-(--text-primary) mb-1.5">
             Expected Timeline <span className="text-rose-500">*</span>
           </label>
           <select
             {...register("timeline")}
-            className="w-full px-3.5 py-2.5 rounded-lg border border-[var(--border)] text-sm bg-[var(--bg-base)] text-[var(--text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
+            className="w-full px-3.5 py-2.5 rounded-lg border border-(--border) text-sm bg-(--bg-base) text-(--text-primary) focus:outline-none focus:ring-2 focus:ring-(--accent)"
           >
             {timelineOptions.map((t) => (
               <option key={t} value={t}>
@@ -257,15 +257,15 @@ export function ProjectInquiryForm() {
 
       {/* Description */}
       <div>
-        <label className="block text-xs font-semibold text-[var(--text-primary)] mb-1.5">
+        <label className="block text-xs font-semibold text-(--text-primary) mb-1.5">
           Project Description & Requirements <span className="text-rose-500">*</span>
         </label>
         <textarea
           rows={4}
           placeholder="Describe what you want to build, existing business challenges, desired integrations, or specific deadlines..."
           {...register("description")}
-          className={`w-full px-3.5 py-2.5 rounded-lg border text-sm bg-[var(--bg-base)] text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)] resize-y ${
-            errors.description ? "border-rose-500" : "border-[var(--border)]"
+          className={`w-full px-3.5 py-2.5 rounded-lg border text-sm bg-(--bg-base) text-(--text-primary) placeholder:text-(--text-muted) focus:outline-none focus:ring-2 focus:ring-(--accent) resize-y ${
+            errors.description ? "border-rose-500" : "border-(--border)"
           }`}
         />
         {errors.description && (
@@ -307,7 +307,7 @@ export function ProjectInquiryForm() {
         </Button>
       </div>
 
-      <p className="text-center text-[11px] text-[var(--text-muted)]">
+      <p className="text-center text-[11px] text-(--text-muted)">
         Your information is kept strictly confidential. No spam or unsolicited marketing.
       </p>
     </form>

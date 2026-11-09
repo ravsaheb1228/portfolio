@@ -22,8 +22,8 @@ export function DesktopNavigation() {
             className={cn(
               "px-3 py-2 text-sm font-medium rounded-md transition-colors duration-150",
               isActive
-                ? "text-[var(--accent)] bg-[var(--accent-subtle)] font-semibold"
-                : "text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]"
+                ? "text-(--accent) bg-(--accent-subtle) font-semibold"
+                : "text-(--text-secondary) hover:text-(--text-primary) hover:bg-(--bg-elevated)"
             )}
           >
             {item.title}

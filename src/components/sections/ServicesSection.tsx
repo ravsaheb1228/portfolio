@@ -47,7 +47,7 @@ export function ServicesSection() {
   };
 
   return (
-    <section className="py-20 sm:py-28 border-t border-[var(--border)] bg-[var(--bg-surface)]">
+    <section className="py-20 sm:py-28 border-t border-(--border) bg-(--bg-surface)">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <SectionHeading
@@ -76,30 +76,30 @@ export function ServicesSection() {
               className="p-6 sm:p-7 flex flex-col justify-between"
             >
               <div className="space-y-4">
-                <div className="p-3 w-fit rounded-xl border border-[var(--border)] bg-[var(--bg-elevated)]">
+                <div className="p-3 w-fit rounded-xl border border-(--border) bg-(--bg-elevated)">
                   {getIcon(service.iconName)}
                 </div>
 
                 <div>
-                  <h3 className="text-lg font-bold text-[var(--text-primary)]">
+                  <h3 className="text-lg font-bold text-(--text-primary)">
                     {service.title}
                   </h3>
-                  <p className="mt-2 text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed">
+                  <p className="mt-2 text-xs sm:text-sm text-(--text-secondary) leading-relaxed">
                     {service.shortDescription}
                   </p>
                 </div>
 
                 <div className="space-y-1.5 pt-2">
-                  <div className="text-[11px] font-mono uppercase tracking-wider text-[var(--text-muted)] font-semibold">
+                  <div className="text-[11px] font-mono uppercase tracking-wider text-(--text-muted) font-semibold">
                     Core Deliverables
                   </div>
                   <ul className="space-y-1">
                     {service.capabilities.slice(0, 3).map((cap, i) => (
                       <li
                         key={i}
-                        className="flex items-start gap-2 text-xs text-[var(--text-secondary)]"
+                        className="flex items-start gap-2 text-xs text-(--text-secondary)"
                       >
-                        <CheckCircle2 className="w-3.5 h-3.5 text-[var(--accent)] shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-3.5 h-3.5 text-(--accent) shrink-0 mt-0.5" />
                         <span>{cap}</span>
                       </li>
                     ))}
@@ -107,10 +107,10 @@ export function ServicesSection() {
                 </div>
               </div>
 
-              <div className="pt-6 mt-4 border-t border-[var(--border)] flex items-center justify-between">
+              <div className="pt-6 mt-4 border-t border-(--border) flex items-center justify-between">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[var(--accent)] hover:underline"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-(--accent) hover:underline"
                 >
                   <span>Inquire for this service</span>
                   <ArrowRight className="w-3 h-3" />

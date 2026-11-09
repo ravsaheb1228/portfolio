@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 
 export function AchievementsSection() {
   return (
-    <section className="py-20 sm:py-28 border-t border-[var(--border)] bg-[var(--bg-base)]">
+    <section className="py-20 sm:py-28 border-t border-(--border) bg-(--bg-base)">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <SectionHeading

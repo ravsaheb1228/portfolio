@@ -19,7 +19,7 @@ export function BusinessSolutionsSection() {
   const activeSolution = businessSolutionsData[activeSolutionIndex];
 
   return (
-    <section className="py-20 sm:py-28 border-t border-[var(--border)] bg-[var(--bg-base)]">
+    <section className="py-20 sm:py-28 border-t border-(--border) bg-(--bg-base)">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <SectionHeading
@@ -44,7 +44,7 @@ export function BusinessSolutionsSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Solution Selector Sidebar */}
           <div className="lg:col-span-5 space-y-2 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0">
-            <div className="text-xs font-mono uppercase tracking-wider text-[var(--text-muted)] font-semibold mb-3 px-1">
+            <div className="text-xs font-mono uppercase tracking-wider text-(--text-muted) font-semibold mb-3 px-1">
               Select Business Domain
             </div>
             {businessSolutionsData.slice(0, 5).map((solution, idx) => {
@@ -56,22 +56,22 @@ export function BusinessSolutionsSection() {
                   onClick={() => setActiveSolutionIndex(idx)}
                   className={`w-full text-left p-4 rounded-xl border transition-all ${
                     isSelected
-                      ? "border-[var(--accent)] bg-[var(--bg-surface)] shadow-md"
-                      : "border-[var(--border)] bg-[var(--bg-elevated)] hover:border-[var(--border-strong)] hover:bg-[var(--bg-surface)]"
+                      ? "border-(--accent) bg-(--bg-surface) shadow-md"
+                      : "border-(--border) bg-(--bg-elevated) hover:border-(--border-strong) hover:bg-(--bg-surface)"
                   }`}
                 >
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-mono text-[var(--accent)] font-semibold">
+                    <span className="text-xs font-mono text-(--accent) font-semibold">
                       0{idx + 1} • {solution.category}
                     </span>
                     {isSelected && (
-                      <span className="w-2 h-2 rounded-full bg-[var(--accent)]" />
+                      <span className="w-2 h-2 rounded-full bg-(--accent)" />
                     )}
                   </div>
-                  <h4 className="text-sm font-bold text-[var(--text-primary)] mt-1">
+                  <h4 className="text-sm font-bold text-(--text-primary) mt-1">
                     {solution.title}
                   </h4>
-                  <p className="text-xs text-[var(--text-secondary)] mt-1 line-clamp-1">
+                  <p className="text-xs text-(--text-secondary) mt-1 line-clamp-1">
                     {solution.summary}
                   </p>
                 </button>
@@ -81,14 +81,14 @@ export function BusinessSolutionsSection() {
 
           {/* Active Solution Deep Dive Panel */}
           <div className="lg:col-span-7">
-            <Card className="p-6 sm:p-8 space-y-6 border-[var(--border-strong)] shadow-xl bg-[var(--bg-surface)]">
+            <Card className="p-6 sm:p-8 space-y-6 border-(--border-strong) shadow-xl bg-(--bg-surface)">
               {/* Header */}
-              <div className="flex flex-wrap items-center justify-between gap-2 pb-4 border-b border-[var(--border)]">
+              <div className="flex flex-wrap items-center justify-between gap-2 pb-4 border-b border-(--border)">
                 <div>
                   <Badge variant="accent" size="sm" className="mb-1">
                     {activeSolution.category}
                   </Badge>
-                  <h3 className="text-xl sm:text-2xl font-bold text-[var(--text-primary)]">
+                  <h3 className="text-xl sm:text-2xl font-bold text-(--text-primary)">
                     {activeSolution.title}
                   </h3>
                 </div>
@@ -98,7 +98,7 @@ export function BusinessSolutionsSection() {
               </div>
 
               {/* Mockup Preview */}
-              <div className="rounded-xl border border-[var(--border)] overflow-hidden bg-[var(--bg-elevated)] p-3">
+              <div className="rounded-xl border border-(--border) overflow-hidden bg-(--bg-elevated) p-3">
                 <DashboardMockup
                   type={activeSolution.mockupType}
                   title={`${activeSolution.title} Console`}
@@ -113,7 +113,7 @@ export function BusinessSolutionsSection() {
                     <AlertCircle className="w-3.5 h-3.5" />
                     <span>Business Challenges</span>
                   </div>
-                  <ul className="space-y-1.5 text-xs text-[var(--text-secondary)]">
+                  <ul className="space-y-1.5 text-xs text-(--text-secondary)">
                     {activeSolution.businessChallenges.map((c, i) => (
                       <li key={i} className="flex items-start gap-1.5">
                         <span className="text-rose-500 font-bold">•</span>
@@ -128,7 +128,7 @@ export function BusinessSolutionsSection() {
                     <TrendingUp className="w-3.5 h-3.5" />
                     <span>Operational Benefits</span>
                   </div>
-                  <ul className="space-y-1.5 text-xs text-[var(--text-secondary)]">
+                  <ul className="space-y-1.5 text-xs text-(--text-secondary)">
                     {activeSolution.operationalBenefits.map((b, i) => (
                       <li key={i} className="flex items-start gap-1.5">
                         <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5" />
@@ -140,8 +140,8 @@ export function BusinessSolutionsSection() {
               </div>
 
               {/* Proposed Solution Narrative */}
-              <div className="pt-2 text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed">
-                <strong className="text-[var(--text-primary)]">The Architectural Approach: </strong>
+              <div className="pt-2 text-xs sm:text-sm text-(--text-secondary) leading-relaxed">
+                <strong className="text-(--text-primary)">The Architectural Approach: </strong>
                 {activeSolution.proposedSolution}
               </div>
             </Card>

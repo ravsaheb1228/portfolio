@@ -31,7 +31,7 @@ export function WhyWorkWithMeSection() {
   };
 
   return (
-    <section className="py-20 sm:py-28 border-t border-[var(--border)] bg-[var(--bg-surface)]">
+    <section className="py-20 sm:py-28 border-t border-(--border) bg-(--bg-surface)">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           badge="Client Value"
@@ -49,19 +49,19 @@ export function WhyWorkWithMeSection() {
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <div className="p-2.5 rounded-xl border border-[var(--border)] bg-[var(--bg-elevated)]">
+                  <div className="p-2.5 rounded-xl border border-(--border) bg-(--bg-elevated)">
                     {getIcon(item.iconName)}
                   </div>
-                  <span className="font-mono text-xs font-bold text-[var(--accent)]">
+                  <span className="font-mono text-xs font-bold text-(--accent)">
                     {item.number}
                   </span>
                 </div>
 
-                <h3 className="text-base font-bold text-[var(--text-primary)]">
+                <h3 className="text-base font-bold text-(--text-primary)">
                   {item.title}
                 </h3>
 
-                <p className="text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed">
+                <p className="text-xs sm:text-sm text-(--text-secondary) leading-relaxed">
                   {item.description}
                 </p>
               </div>

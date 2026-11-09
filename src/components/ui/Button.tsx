@@ -24,7 +24,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => {
     const baseStyles =
-      "inline-flex items-center justify-center font-medium transition-all duration-200 rounded-lg focus-visible:outline-2 focus-visible:outline-[var(--accent)] disabled:opacity-50 disabled:pointer-events-none select-none";
+      "inline-flex items-center justify-center font-medium transition-all duration-200 rounded-lg focus-visible:outline-2 focus-visible:outline-(--accent) disabled:opacity-50 disabled:pointer-events-none select-none";
 
     const sizeStyles = {
       sm: "text-xs px-3 py-1.5 gap-1.5",
@@ -34,13 +34,13 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     const variantStyles = {
       primary:
-        "bg-[var(--accent)] text-white hover:bg-[var(--accent-hover)] shadow-sm hover:shadow-md hover:shadow-blue-500/20 active:scale-[0.99]",
+        "bg-(--accent) text-white hover:bg-(--accent-hover) shadow-sm hover:shadow-md hover:shadow-blue-500/20 active:scale-[0.99]",
       secondary:
-        "bg-[var(--bg-elevated)] text-[var(--text-primary)] hover:bg-[var(--border)] border border-[var(--border)] active:scale-[0.99]",
+        "bg-(--bg-elevated) text-(--text-primary) hover:bg-(--border) border border-(--border) active:scale-[0.99]",
       outline:
-        "bg-transparent text-[var(--text-primary)] border border-[var(--border-strong)] hover:border-[var(--accent)] hover:text-[var(--accent)] active:scale-[0.99]",
+        "bg-transparent text-(--text-primary) border border-(--border-strong) hover:border-(--accent) hover:text-(--accent) active:scale-[0.99]",
       ghost:
-        "bg-transparent text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--accent-subtle)]",
+        "bg-transparent text-(--text-secondary) hover:text-(--text-primary) hover:bg-(--accent-subtle)",
     };
 
     const combinedClassName = cn(

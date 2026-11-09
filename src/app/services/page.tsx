@@ -71,35 +71,35 @@ export default function ServicesPage() {
           >
             <div className="space-y-6">
               <div className="flex items-start justify-between">
-                <div className="p-3 rounded-xl border border-[var(--border)] bg-[var(--bg-elevated)]">
+                <div className="p-3 rounded-xl border border-(--border) bg-(--bg-elevated)">
                   {getIcon(service.iconName)}
                 </div>
-                <span className="font-mono text-xs font-bold text-[var(--accent)]">
+                <span className="font-mono text-xs font-bold text-(--accent)">
                   0{idx + 1}
                 </span>
               </div>
 
               <div>
-                <h3 className="text-xl font-bold text-[var(--text-primary)]">
+                <h3 className="text-xl font-bold text-(--text-primary)">
                   {service.title}
                 </h3>
-                <p className="mt-2 text-sm text-[var(--text-secondary)] leading-relaxed">
+                <p className="mt-2 text-sm text-(--text-secondary) leading-relaxed">
                   {service.shortDescription}
                 </p>
               </div>
 
               {/* Capabilities */}
               <div className="space-y-2">
-                <div className="text-xs font-mono uppercase tracking-wider text-[var(--text-muted)] font-semibold">
+                <div className="text-xs font-mono uppercase tracking-wider text-(--text-muted) font-semibold">
                   Technical Capabilities
                 </div>
                 <ul className="space-y-1.5">
                   {service.capabilities.map((cap, i) => (
                     <li
                       key={i}
-                      className="flex items-start gap-2 text-xs text-[var(--text-secondary)]"
+                      className="flex items-start gap-2 text-xs text-(--text-secondary)"
                     >
-                      <CheckCircle2 className="w-3.5 h-3.5 text-[var(--accent)] shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-(--accent) shrink-0 mt-0.5" />
                       <span>{cap}</span>
                     </li>
                   ))}
@@ -112,7 +112,7 @@ export default function ServicesPage() {
                   <TrendingUp className="w-3.5 h-3.5" />
                   <span>Business Impact</span>
                 </div>
-                <ul className="space-y-1 text-xs text-[var(--text-secondary)]">
+                <ul className="space-y-1 text-xs text-(--text-secondary)">
                   {service.businessBenefits.map((b, i) => (
                     <li key={i} className="flex items-start gap-1.5">
                       <span className="text-emerald-500 font-bold">•</span>
@@ -123,7 +123,7 @@ export default function ServicesPage() {
               </div>
             </div>
 
-            <div className="pt-6 mt-6 border-t border-[var(--border)] flex items-center justify-between">
+            <div className="pt-6 mt-6 border-t border-(--border) flex items-center justify-between">
               <Button href="/contact" variant="primary" size="sm" className="w-full">
                 <span>Inquire About This Service</span>
                 <ArrowRight className="w-3.5 h-3.5 ml-1.5" />

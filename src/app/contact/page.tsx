@@ -31,11 +31,11 @@ export default function ContactPage() {
         <div className="lg:col-span-5 space-y-6">
           <ContactMethodCard />
 
-          <Card className="p-6 space-y-3.5 bg-[var(--bg-elevated)]">
-            <h4 className="text-xs font-mono uppercase tracking-wider text-[var(--text-primary)] font-bold">
+          <Card className="p-6 space-y-3.5 bg-(--bg-elevated)">
+            <h4 className="text-xs font-mono uppercase tracking-wider text-(--text-primary) font-bold">
               My Engagement Commitments
             </h4>
-            <div className="space-y-3 text-xs text-[var(--text-secondary)]">
+            <div className="space-y-3 text-xs text-(--text-secondary)">
               <div className="flex items-start gap-2.5">
                 <Clock className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" />
                 <span>

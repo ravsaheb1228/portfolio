@@ -30,11 +30,11 @@ export function SectionHeading({
           {badge}
         </Badge>
       )}
-      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-[var(--text-primary)]">
+      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-(--text-primary)">
         {title}
       </h2>
       {subtitle && (
-        <p className="mt-3.5 text-base sm:text-lg text-[var(--text-secondary)] leading-relaxed font-normal">
+        <p className="mt-3.5 text-base sm:text-lg text-(--text-secondary) leading-relaxed font-normal">
           {subtitle}
         </p>
       )}

@@ -24,7 +24,7 @@ export function ProjectFilter({
     <div className="space-y-4 mb-8">
       {/* Category Filter Pills */}
       <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
-        <div className="flex items-center gap-1.5 text-xs text-[var(--text-muted)] font-mono shrink-0 mr-2">
+        <div className="flex items-center gap-1.5 text-xs text-(--text-muted) font-mono shrink-0 mr-2">
           <Filter className="w-3.5 h-3.5" />
           <span>Category:</span>
         </div>
@@ -37,8 +37,8 @@ export function ProjectFilter({
               onClick={() => onSelectCategory(cat)}
               className={`shrink-0 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
                 isSelected
-                  ? "bg-[var(--accent)] text-white shadow-sm"
-                  : "bg-[var(--bg-surface)] text-[var(--text-secondary)] border border-[var(--border)] hover:border-[var(--accent)] hover:text-[var(--text-primary)]"
+                  ? "bg-(--accent) text-white shadow-sm"
+                  : "bg-(--bg-surface) text-(--text-secondary) border border-(--border) hover:border-(--accent) hover:text-(--text-primary)"
               }`}
             >
               {cat}
@@ -49,7 +49,7 @@ export function ProjectFilter({
 
       {/* Status Filter */}
       <div className="flex items-center gap-2 text-xs">
-        <span className="text-[var(--text-muted)] font-mono mr-1">Status:</span>
+        <span className="text-(--text-muted) font-mono mr-1">Status:</span>
         {statuses.map((status) => {
           const isSelected = selectedStatus === status;
           return (
@@ -59,8 +59,8 @@ export function ProjectFilter({
               onClick={() => onSelectStatus(status)}
               className={`px-2.5 py-1 rounded-md transition-colors ${
                 isSelected
-                  ? "bg-[var(--bg-elevated)] text-[var(--accent)] font-semibold border border-[var(--accent)]/40"
-                  : "text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
+                  ? "bg-(--bg-elevated) text-(--accent) font-semibold border border-(--accent)/40"
+                  : "text-(--text-secondary) hover:text-(--text-primary)"
               }`}
             >
               {status}

@@ -5,7 +5,7 @@ import { ContactMethodCard } from "@/components/contact/ContactMethodCard";
 
 export function ContactSection() {
   return (
-    <section id="contact" className="py-20 sm:py-28 border-t border-[var(--border)] bg-[var(--bg-base)]">
+    <section id="contact" className="py-20 sm:py-28 border-t border-(--border) bg-(--bg-base)">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           badge="Start a Project Discussion"

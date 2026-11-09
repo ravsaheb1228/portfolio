@@ -6,7 +6,7 @@ import { CheckCircle2 } from "lucide-react";
 
 export function WorkflowSection() {
   return (
-    <section className="py-20 sm:py-28 border-t border-[var(--border)] bg-[var(--bg-base)]">
+    <section className="py-20 sm:py-28 border-t border-(--border) bg-(--bg-base)">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           badge="Execution Methodology"
@@ -30,30 +30,30 @@ export function WorkflowSection() {
                   <span className="font-mono text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-500">
                     {stage.step}
                   </span>
-                  <span className="text-[10px] uppercase font-mono tracking-wider px-2 py-0.5 rounded bg-[var(--bg-elevated)] text-[var(--text-muted)] border border-[var(--border)]">
+                  <span className="text-[10px] uppercase font-mono tracking-wider px-2 py-0.5 rounded bg-(--bg-elevated) text-(--text-muted) border border-(--border)">
                     Phase {idx + 1}
                   </span>
                 </div>
 
-                <h3 className="text-base font-bold text-[var(--text-primary)]">
+                <h3 className="text-base font-bold text-(--text-primary)">
                   {stage.title}
                 </h3>
 
-                <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                <p className="text-xs text-(--text-secondary) leading-relaxed">
                   {stage.description}
                 </p>
 
-                <div className="pt-3 border-t border-[var(--border)] space-y-1.5">
-                  <div className="text-[10px] font-mono uppercase text-[var(--text-muted)] font-semibold">
+                <div className="pt-3 border-t border-(--border) space-y-1.5">
+                  <div className="text-[10px] font-mono uppercase text-(--text-muted) font-semibold">
                     Key Deliverables
                   </div>
                   <ul className="space-y-1">
                     {stage.deliverables.map((deliv, i) => (
                       <li
                         key={i}
-                        className="flex items-start gap-1.5 text-[11px] text-[var(--text-secondary)]"
+                        className="flex items-start gap-1.5 text-[11px] text-(--text-secondary)"
                       >
-                        <CheckCircle2 className="w-3 h-3 text-[var(--accent)] shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-3 h-3 text-(--accent) shrink-0 mt-0.5" />
                         <span>{deliv}</span>
                       </li>
                     ))}

@@ -45,8 +45,8 @@ export function ProjectGrid({
       )}
 
       {filteredProjects.length === 0 ? (
-        <div className="py-16 text-center rounded-xl border border-dashed border-[var(--border)] bg-[var(--bg-surface)] p-8">
-          <p className="text-base text-[var(--text-secondary)]">
+        <div className="py-16 text-center rounded-xl border border-dashed border-(--border) bg-(--bg-surface) p-8">
+          <p className="text-base text-(--text-secondary)">
             No projects found matching the selected filter criteria.
           </p>
           <button
@@ -55,7 +55,7 @@ export function ProjectGrid({
               setSelectedCategory("All");
               setSelectedStatus("All");
             }}
-            className="mt-3 text-sm font-semibold text-[var(--accent)] hover:underline"
+            className="mt-3 text-sm font-semibold text-(--accent) hover:underline"
           >
             Reset Filters
           </button>

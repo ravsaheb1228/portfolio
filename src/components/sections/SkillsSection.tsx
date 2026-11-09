@@ -31,7 +31,7 @@ export function SkillsSection() {
   };
 
   return (
-    <section className="py-20 sm:py-28 border-t border-[var(--border)] bg-[var(--bg-base)]">
+    <section className="py-20 sm:py-28 border-t border-(--border) bg-(--bg-base)">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           badge="Technical Stack"
@@ -48,17 +48,17 @@ export function SkillsSection() {
             >
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-lg border border-[var(--border)] bg-[var(--bg-elevated)]">
+                  <div className="p-2.5 rounded-lg border border-(--border) bg-(--bg-elevated)">
                     {getCategoryIcon(category.id)}
                   </div>
                   <div>
-                    <h3 className="text-base font-bold text-[var(--text-primary)]">
+                    <h3 className="text-base font-bold text-(--text-primary)">
                       {category.title}
                     </h3>
                   </div>
                 </div>
 
-                <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                <p className="text-xs text-(--text-secondary) leading-relaxed">
                   {category.description}
                 </p>
 
@@ -66,11 +66,11 @@ export function SkillsSection() {
                   {category.skills.map((skill, idx) => (
                     <div
                       key={idx}
-                      className="group/pill inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium border border-[var(--border)] bg-[var(--bg-elevated)] text-[var(--text-primary)] hover:border-[var(--accent)] hover:bg-[var(--accent-subtle)] transition-colors"
+                      className="group/pill inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium border border-(--border) bg-(--bg-elevated) text-(--text-primary) hover:border-(--accent) hover:bg-(--accent-subtle) transition-colors"
                     >
                       <span>{skill.name}</span>
                       {skill.tag && (
-                        <span className="text-[10px] text-[var(--text-muted)] font-mono">
+                        <span className="text-[10px] text-(--text-muted) font-mono">
                           • {skill.tag}
                         </span>
                       )}

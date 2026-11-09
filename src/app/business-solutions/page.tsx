@@ -33,23 +33,23 @@ export default function BusinessSolutionsPage() {
           <div
             key={solution.id}
             id={solution.slug}
-            className="scroll-mt-24 p-6 sm:p-10 rounded-2xl border border-[var(--border)] bg-[var(--bg-surface)] shadow-lg space-y-8"
+            className="scroll-mt-24 p-6 sm:p-10 rounded-2xl border border-(--border) bg-(--bg-surface) shadow-lg space-y-8"
           >
             {/* Header */}
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-6 border-b border-[var(--border)]">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-6 border-b border-(--border)">
               <div className="space-y-1">
                 <div className="flex items-center gap-2">
-                  <span className="font-mono text-xs font-bold text-[var(--accent)]">
+                  <span className="font-mono text-xs font-bold text-(--accent)">
                     0{index + 1}
                   </span>
                   <Badge variant="accent" size="sm">
                     {solution.category}
                   </Badge>
                 </div>
-                <h2 className="text-2xl sm:text-3xl font-extrabold text-[var(--text-primary)]">
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-(--text-primary)">
                   {solution.title}
                 </h2>
-                <p className="text-sm text-[var(--text-secondary)]">
+                <p className="text-sm text-(--text-secondary)">
                   {solution.summary}
                 </p>
               </div>
@@ -66,7 +66,7 @@ export default function BusinessSolutionsPage() {
             </div>
 
             {/* Mockup Showcase */}
-            <div className="rounded-xl border border-[var(--border)] bg-[var(--bg-elevated)] p-3 sm:p-4">
+            <div className="rounded-xl border border-(--border) bg-(--bg-elevated) p-3 sm:p-4">
               <DashboardMockup
                 type={solution.mockupType}
                 title={`${solution.title} Workspace`}
@@ -82,7 +82,7 @@ export default function BusinessSolutionsPage() {
                   <AlertCircle className="w-4 h-4" />
                   <span>The Challenge</span>
                 </div>
-                <ul className="space-y-2 text-xs text-[var(--text-secondary)]">
+                <ul className="space-y-2 text-xs text-(--text-secondary)">
                   {solution.businessChallenges.map((c, i) => (
                     <li key={i} className="flex items-start gap-1.5">
                       <span className="text-rose-500 font-bold">•</span>
@@ -93,15 +93,15 @@ export default function BusinessSolutionsPage() {
               </div>
 
               {/* Core Features */}
-              <div className="p-5 rounded-xl border border-[var(--border)] bg-[var(--bg-elevated)] space-y-3">
-                <div className="text-xs font-bold text-[var(--accent)] flex items-center gap-1.5 uppercase font-mono tracking-wider">
+              <div className="p-5 rounded-xl border border-(--border) bg-(--bg-elevated) space-y-3">
+                <div className="text-xs font-bold text-(--accent) flex items-center gap-1.5 uppercase font-mono tracking-wider">
                   <Briefcase className="w-4 h-4" />
                   <span>Key Features</span>
                 </div>
-                <ul className="space-y-2 text-xs text-[var(--text-secondary)]">
+                <ul className="space-y-2 text-xs text-(--text-secondary)">
                   {solution.keyFeatures.map((f, i) => (
                     <li key={i} className="flex items-start gap-1.5">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-[var(--accent)] shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-(--accent) shrink-0 mt-0.5" />
                       <span>{f}</span>
                     </li>
                   ))}
@@ -114,7 +114,7 @@ export default function BusinessSolutionsPage() {
                   <TrendingUp className="w-4 h-4" />
                   <span>Business Impact</span>
                 </div>
-                <ul className="space-y-2 text-xs text-[var(--text-secondary)]">
+                <ul className="space-y-2 text-xs text-(--text-secondary)">
                   {solution.operationalBenefits.map((b, i) => (
                     <li key={i} className="flex items-start gap-1.5">
                       <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5" />
@@ -126,8 +126,8 @@ export default function BusinessSolutionsPage() {
             </div>
 
             {/* Architecture Statement */}
-            <div className="p-4 rounded-xl border border-[var(--border)] bg-[var(--bg-base)] text-xs text-[var(--text-secondary)] leading-relaxed">
-              <strong className="text-[var(--text-primary)]">Solution Engineering: </strong>
+            <div className="p-4 rounded-xl border border-(--border) bg-(--bg-base) text-xs text-(--text-secondary) leading-relaxed">
+              <strong className="text-(--text-primary)">Solution Engineering: </strong>
               {solution.proposedSolution}
             </div>
           </div>

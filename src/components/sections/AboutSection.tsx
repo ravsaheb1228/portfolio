@@ -14,7 +14,7 @@ import { WhatsApp } from "@/components/ui/Icons";
 
 export function AboutSection() {
   return (
-    <section className="py-20 sm:py-28 border-t border-[var(--border)] bg-[var(--bg-base)]">
+    <section className="py-20 sm:py-28 border-t border-(--border) bg-(--bg-base)">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           badge="Professional Background"
@@ -25,7 +25,7 @@ export function AboutSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Column: Portrait & Credentials Box */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="relative rounded-2xl border border-[var(--border-strong)] bg-gradient-to-b from-[var(--bg-elevated)] to-[var(--bg-surface)] p-6 sm:p-8 overflow-hidden shadow-xl">
+            <div className="relative rounded-2xl border border-(--border-strong) bg-gradient-to-b from-(--bg-elevated) to-(--bg-surface) p-6 sm:p-8 overflow-hidden shadow-xl">
               {/* Profile Photo Visual */}
               <div className="relative w-36 h-36 sm:w-44 sm:h-44 mx-auto rounded-full p-1 bg-gradient-to-tr from-blue-600 via-indigo-600 to-cyan-400 shadow-2xl">
                 <Image
@@ -33,36 +33,36 @@ export function AboutSection() {
                   alt={personalData.name}
                   width={176}
                   height={176}
-                  className="w-full h-full rounded-full object-cover border-2 border-[var(--bg-surface)]"
+                  className="w-full h-full rounded-full object-cover border-2 border-(--bg-surface)"
                   priority
                 />
-                <span className="absolute bottom-1 right-2 w-5 h-5 rounded-full bg-emerald-500 border-2 border-[var(--bg-surface)] shadow-md" />
+                <span className="absolute bottom-1 right-2 w-5 h-5 rounded-full bg-emerald-500 border-2 border-(--bg-surface) shadow-md" />
               </div>
 
               {/* Bio summary in card */}
               <div className="text-center mt-6 space-y-2">
-                <h3 className="text-xl font-bold text-[var(--text-primary)]">
+                <h3 className="text-xl font-bold text-(--text-primary)">
                   {personalData.name}
                 </h3>
-                <p className="text-xs font-mono uppercase tracking-wider text-[var(--accent)] font-medium">
+                <p className="text-xs font-mono uppercase tracking-wider text-(--accent) font-medium">
                   {personalData.title}
                 </p>
-                <p className="text-xs text-[var(--text-secondary)]">
+                <p className="text-xs text-(--text-secondary)">
                   {personalData.location}
                 </p>
               </div>
 
               {/* Quick credential facts */}
-              <div className="mt-6 pt-6 border-t border-[var(--border)] space-y-3">
-                <div className="flex items-center gap-3 text-xs text-[var(--text-secondary)]">
+              <div className="mt-6 pt-6 border-t border-(--border) space-y-3">
+                <div className="flex items-center gap-3 text-xs text-(--text-secondary)">
                   <GraduationCap className="w-4 h-4 text-blue-500 shrink-0" />
                   <span>M.Sc. Computer Science • Patkar Varde College</span>
                 </div>
-                <div className="flex items-center gap-3 text-xs text-[var(--text-secondary)]">
+                <div className="flex items-center gap-3 text-xs text-(--text-secondary)">
                   <GraduationCap className="w-4 h-4 text-indigo-500 shrink-0" />
                   <span>B.Sc. Computer Science • Patkar Varde College</span>
                 </div>
-                <div className="flex items-center gap-3 text-xs text-[var(--text-secondary)]">
+                <div className="flex items-center gap-3 text-xs text-(--text-secondary)">
                   <ShieldCheck className="w-4 h-4 text-emerald-500 shrink-0" />
                   <span>Udemy Web Development Certified (Aug 2024)</span>
                 </div>
@@ -86,7 +86,7 @@ export function AboutSection() {
                   size="sm"
                   className="w-full gap-2"
                 >
-                  <Download className="w-3.5 h-3.5 text-[var(--accent)]" />
+                  <Download className="w-3.5 h-3.5 text-(--accent)" />
                   <span>Resume</span>
                 </Button>
               </div>
@@ -95,20 +95,20 @@ export function AboutSection() {
 
           {/* Right Column: Narrative & Pillars */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="p-6 rounded-2xl border border-[var(--border)] bg-[var(--bg-surface)] space-y-4">
-              <h3 className="text-lg font-bold text-[var(--text-primary)]">
+            <div className="p-6 rounded-2xl border border-(--border) bg-(--bg-surface) space-y-4">
+              <h3 className="text-lg font-bold text-(--text-primary)">
                 About Ravsaheb Khairnar
               </h3>
-              <p className="text-base text-[var(--text-secondary)] leading-relaxed">
+              <p className="text-base text-(--text-secondary) leading-relaxed">
                 {personalData.professionalSummary}
               </p>
-              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+              <p className="text-sm text-(--text-secondary) leading-relaxed">
                 Having earned both my Bachelor&apos;s and Master&apos;s degrees in Computer
                 Science from Patkar Varde College (University of Mumbai), I treat software
                 development as an engineering discipline rooted in system reliability, clean
                 architecture, and tangible business value.
               </p>
-              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+              <p className="text-sm text-(--text-secondary) leading-relaxed">
                 Rather than treating UI design and backend coding as disconnected silos, I
                 unify both worlds—designing user journeys that eliminate friction, and writing
                 type-safe, scalable code that makes those designs performant in production.
@@ -120,12 +120,12 @@ export function AboutSection() {
               {personalData.aboutPoints.map((pt, idx) => (
                 <div
                   key={idx}
-                  className="p-4 rounded-xl border border-[var(--border)] bg-[var(--bg-elevated)] space-y-1.5"
+                  className="p-4 rounded-xl border border-(--border) bg-(--bg-elevated) space-y-1.5"
                 >
-                  <div className="text-xs font-bold text-[var(--text-primary)]">
+                  <div className="text-xs font-bold text-(--text-primary)">
                     {pt.title}
                   </div>
-                  <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                  <p className="text-xs text-(--text-secondary) leading-relaxed">
                     {pt.description}
                   </p>
                 </div>
@@ -135,7 +135,7 @@ export function AboutSection() {
             <div className="pt-2 flex items-center justify-between">
               <Link
                 href="/about"
-                className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--accent)] hover:underline"
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-(--accent) hover:underline"
               >
                 <span>Read Full Biography & Engineering Philosophy</span>
                 <ArrowRight className="w-4 h-4" />

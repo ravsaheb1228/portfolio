@@ -36,14 +36,14 @@ export function HeroSection() {
                   className="w-full h-full rounded-full object-cover"
                   priority
                 />
-                <span className="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-emerald-500 border-2 border-[var(--bg-base)]" />
+                <span className="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-emerald-500 border-2 border-(--bg-base)" />
               </div>
 
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-semibold tracking-wide">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                 <span>{personalData.availability.status}</span>
-                <span className="text-[var(--text-muted)]">•</span>
-                <span className="text-xs font-normal text-[var(--text-secondary)]">
+                <span className="text-(--text-muted)">•</span>
+                <span className="text-xs font-normal text-(--text-secondary)">
                   {personalData.availability.type}
                 </span>
               </div>
@@ -51,10 +51,10 @@ export function HeroSection() {
 
             {/* Main Headline */}
             <div className="space-y-3">
-              <div className="text-xs sm:text-sm font-mono uppercase tracking-widest text-[var(--accent)] font-bold">
+              <div className="text-xs sm:text-sm font-mono uppercase tracking-widest text-(--accent) font-bold">
                 {personalData.name} — {personalData.title}
               </div>
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[var(--text-primary)] leading-[1.12]">
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-(--text-primary) leading-[1.12]">
                 Designing Digital Experiences.{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-indigo-400 to-cyan-400">
                   Engineering Powerful Business Solutions.
@@ -63,7 +63,7 @@ export function HeroSection() {
             </div>
 
             {/* Supporting Subheadline */}
-            <p className="text-base sm:text-lg text-[var(--text-secondary)] leading-relaxed max-w-2xl font-normal">
+            <p className="text-base sm:text-lg text-(--text-secondary) leading-relaxed max-w-2xl font-normal">
               {personalData.subheadline}
             </p>
 
@@ -90,20 +90,20 @@ export function HeroSection() {
                 size="lg"
                 className="gap-2"
               >
-                <Download className="w-4 h-4 text-[var(--accent)]" />
+                <Download className="w-4 h-4 text-(--accent)" />
                 <span>Resume</span>
               </Button>
             </div>
 
             {/* Social Links & Trust Badges */}
-            <div className="pt-4 border-t border-[var(--border)] flex flex-wrap items-center justify-between gap-4">
+            <div className="pt-4 border-t border-(--border) flex flex-wrap items-center justify-between gap-4">
               <div className="flex items-center gap-3">
-                <span className="text-xs text-[var(--text-muted)] font-mono">Connect:</span>
+                <span className="text-xs text-(--text-muted) font-mono">Connect:</span>
                 <a
                   href={personalData.socials.github}
                   target="_blank"
                   rel="noreferrer"
-                  className="p-2 rounded-lg border border-[var(--border)] bg-[var(--bg-surface)] text-[var(--text-secondary)] hover:text-[var(--accent)] hover:border-[var(--accent)] transition-colors"
+                  className="p-2 rounded-lg border border-(--border) bg-(--bg-surface) text-(--text-secondary) hover:text-(--accent) hover:border-(--accent) transition-colors"
                   aria-label="GitHub"
                 >
                   <Github className="w-4 h-4" />
@@ -112,7 +112,7 @@ export function HeroSection() {
                   href={personalData.socials.linkedin}
                   target="_blank"
                   rel="noreferrer"
-                  className="p-2 rounded-lg border border-[var(--border)] bg-[var(--bg-surface)] text-[var(--text-secondary)] hover:text-[var(--accent)] hover:border-[var(--accent)] transition-colors"
+                  className="p-2 rounded-lg border border-(--border) bg-(--bg-surface) text-(--text-secondary) hover:text-(--accent) hover:border-(--accent) transition-colors"
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="w-4 h-4" />
@@ -121,14 +121,14 @@ export function HeroSection() {
                   href={personalData.socials.whatsapp}
                   target="_blank"
                   rel="noreferrer"
-                  className="p-2 rounded-lg border border-[var(--border)] bg-[var(--bg-surface)] text-[var(--text-secondary)] hover:text-emerald-500 hover:border-emerald-500 transition-colors"
+                  className="p-2 rounded-lg border border-(--border) bg-(--bg-surface) text-(--text-secondary) hover:text-emerald-500 hover:border-emerald-500 transition-colors"
                   aria-label="WhatsApp"
                 >
                   <WhatsApp className="w-4 h-4 text-emerald-500" />
                 </a>
                 <a
                   href={personalData.socials.email}
-                  className="p-2 rounded-lg border border-[var(--border)] bg-[var(--bg-surface)] text-[var(--text-secondary)] hover:text-[var(--accent)] hover:border-[var(--accent)] transition-colors"
+                  className="p-2 rounded-lg border border-(--border) bg-(--bg-surface) text-(--text-secondary) hover:text-(--accent) hover:border-(--accent) transition-colors"
                   aria-label="Email"
                 >
                   <Mail className="w-4 h-4" />
@@ -152,13 +152,13 @@ export function HeroSection() {
             {/* Layered Decorative Elements */}
             <div className="relative">
               {/* Floating Badge 1: UI/UX Precision */}
-              <div className="absolute -top-4 -left-4 z-20 hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-xl border border-[var(--border-strong)] bg-[var(--bg-surface)]/95 shadow-lg backdrop-blur-md">
+              <div className="absolute -top-4 -left-4 z-20 hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-xl border border-(--border-strong) bg-(--bg-surface)/95 shadow-lg backdrop-blur-md">
                 <div className="w-7 h-7 rounded-lg bg-indigo-500/10 text-indigo-500 flex items-center justify-center">
                   <Layers className="w-4 h-4" />
                 </div>
                 <div>
-                  <div className="text-[10px] font-mono uppercase text-[var(--text-muted)]">Design System</div>
-                  <div className="text-xs font-bold text-[var(--text-primary)]">Figma to Code</div>
+                  <div className="text-[10px] font-mono uppercase text-(--text-muted)">Design System</div>
+                  <div className="text-xs font-bold text-(--text-primary)">Figma to Code</div>
                 </div>
               </div>
 
@@ -171,13 +171,13 @@ export function HeroSection() {
               />
 
               {/* Floating Badge 2: Full-Stack Reliability */}
-              <div className="absolute -bottom-5 -right-4 z-20 hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-xl border border-[var(--border-strong)] bg-[var(--bg-surface)]/95 shadow-lg backdrop-blur-md">
+              <div className="absolute -bottom-5 -right-4 z-20 hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-xl border border-(--border-strong) bg-(--bg-surface)/95 shadow-lg backdrop-blur-md">
                 <div className="w-7 h-7 rounded-lg bg-emerald-500/10 text-emerald-500 flex items-center justify-center">
                   <Code2 className="w-4 h-4" />
                 </div>
                 <div>
-                  <div className="text-[10px] font-mono uppercase text-[var(--text-muted)]">Engineering</div>
-                  <div className="text-xs font-bold text-[var(--text-primary)]">Next.js & TypeScript</div>
+                  <div className="text-[10px] font-mono uppercase text-(--text-muted)">Engineering</div>
+                  <div className="text-xs font-bold text-(--text-primary)">Next.js & TypeScript</div>
                 </div>
               </div>
             </div>

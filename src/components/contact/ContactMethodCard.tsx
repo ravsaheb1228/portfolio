@@ -30,18 +30,18 @@ export function ContactMethodCard() {
       title: "GitHub Repository",
       value: "github.com/ravsaheb1228",
       href: personalData.socials.github,
-      icon: <Github className="w-5 h-5 text-[var(--text-primary)]" />,
+      icon: <Github className="w-5 h-5 text-(--text-primary)" />,
       subtext: "Inspect open-source code & repositories",
     },
   ];
 
   return (
     <div className="space-y-4">
-      <div className="p-5 rounded-2xl border border-[var(--border)] bg-[var(--bg-surface)]">
-        <h4 className="text-sm font-bold uppercase tracking-wider text-[var(--text-primary)] mb-1 font-mono">
+      <div className="p-5 rounded-2xl border border-(--border) bg-(--bg-surface)">
+        <h4 className="text-sm font-bold uppercase tracking-wider text-(--text-primary) mb-1 font-mono">
           Direct Channels
         </h4>
-        <p className="text-xs text-[var(--text-secondary)] mb-4">
+        <p className="text-xs text-(--text-secondary) mb-4">
           Prefer reaching out directly? Choose your preferred medium:
         </p>
 
@@ -52,21 +52,21 @@ export function ContactMethodCard() {
               href={channel.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center justify-between p-3 rounded-xl border border-[var(--border)] bg-[var(--bg-elevated)] hover:border-[var(--accent)] hover:bg-[var(--accent-subtle)] transition-all"
+              className="group flex items-center justify-between p-3 rounded-xl border border-(--border) bg-(--bg-elevated) hover:border-(--accent) hover:bg-(--accent-subtle) transition-all"
             >
               <div className="flex items-center gap-3">
-                <div className="p-2 rounded-lg bg-[var(--bg-surface)] border border-[var(--border)]">
+                <div className="p-2 rounded-lg bg-(--bg-surface) border border-(--border)">
                   {channel.icon}
                 </div>
                 <div>
-                  <div className="text-xs font-bold text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors flex items-center gap-1">
+                  <div className="text-xs font-bold text-(--text-primary) group-hover:text-(--accent) transition-colors flex items-center gap-1">
                     <span>{channel.title}</span>
                     <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
-                  <div className="text-[11px] text-[var(--accent)] font-mono">
+                  <div className="text-[11px] text-(--accent) font-mono">
                     {channel.value}
                   </div>
-                  <div className="text-[10px] text-[var(--text-secondary)]">
+                  <div className="text-[10px] text-(--text-secondary)">
                     {channel.subtext}
                   </div>
                 </div>
@@ -84,7 +84,7 @@ export function ContactMethodCard() {
             {personalData.availability.status}
           </span>
         </div>
-        <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+        <p className="text-xs text-(--text-secondary) leading-relaxed">
           Currently taking on select custom software development projects, design systems, and enterprise web solutions.
         </p>
       </div>

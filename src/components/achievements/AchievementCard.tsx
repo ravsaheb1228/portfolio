@@ -25,11 +25,11 @@ export function AchievementCard({ achievement }: AchievementCardProps) {
     <Card hoverEffect className="p-6 flex flex-col justify-between">
       <div className="space-y-3">
         <div className="flex items-center justify-between gap-2">
-          <div className="p-2.5 rounded-lg border border-[var(--border)] bg-[var(--bg-elevated)]">
+          <div className="p-2.5 rounded-lg border border-(--border) bg-(--bg-elevated)">
             {getIcon()}
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-xs font-mono text-[var(--text-secondary)]">
+            <span className="text-xs font-mono text-(--text-secondary)">
               {achievement.date}
             </span>
             <Badge variant="accent" size="sm">
@@ -39,26 +39,26 @@ export function AchievementCard({ achievement }: AchievementCardProps) {
         </div>
 
         <div>
-          <h3 className="text-lg font-bold text-[var(--text-primary)]">
+          <h3 className="text-lg font-bold text-(--text-primary)">
             {achievement.title}
           </h3>
-          <div className="text-xs font-medium text-[var(--accent)] mt-0.5">
+          <div className="text-xs font-medium text-(--accent) mt-0.5">
             {achievement.issuer}
           </div>
         </div>
 
-        <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+        <p className="text-sm text-(--text-secondary) leading-relaxed">
           {achievement.description}
         </p>
       </div>
 
       {achievement.credentialUrl && (
-        <div className="pt-4 mt-2 border-t border-[var(--border)]">
+        <div className="pt-4 mt-2 border-t border-(--border)">
           <a
             href={achievement.credentialUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-xs font-semibold text-[var(--accent)] hover:underline"
+            className="inline-flex items-center gap-1.5 text-xs font-semibold text-(--accent) hover:underline"
           >
             <span>Verify Credential</span>
             <ExternalLink className="w-3.5 h-3.5" />

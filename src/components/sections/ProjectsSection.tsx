@@ -10,7 +10,7 @@ export function ProjectsSection() {
   const featuredProjects = projectsData.slice(0, 6);
 
   return (
-    <section className="py-20 sm:py-28 border-t border-[var(--border)] bg-[var(--bg-surface)]">
+    <section className="py-20 sm:py-28 border-t border-(--border) bg-(--bg-surface)">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <SectionHeading
@@ -38,16 +38,16 @@ export function ProjectsSection() {
           ))}
         </div>
 
-        <div className="mt-14 p-6 rounded-2xl border border-[var(--border)] bg-[var(--bg-elevated)] flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-14 p-6 rounded-2xl border border-(--border) bg-(--bg-elevated) flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3 text-center sm:text-left">
             <div className="p-3 rounded-xl bg-blue-500/10 text-blue-500">
               <Layers className="w-6 h-6" />
             </div>
             <div>
-              <h4 className="text-sm font-bold text-[var(--text-primary)]">
+              <h4 className="text-sm font-bold text-(--text-primary)">
                 Have a proprietary software requirement?
               </h4>
-              <p className="text-xs text-[var(--text-secondary)]">
+              <p className="text-xs text-(--text-secondary)">
                 I design and engineer custom software applications tailored to your specific business workflows.
               </p>
             </div>

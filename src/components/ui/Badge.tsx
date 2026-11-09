@@ -23,7 +23,7 @@ export function Badge({
 
   const variantStyles = {
     default:
-      "bg-[var(--bg-elevated)] text-[var(--text-secondary)] border border-[var(--border)]",
+      "bg-(--bg-elevated) text-(--text-secondary) border border-(--border)",
     accent:
       "bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20",
     success:
@@ -31,9 +31,9 @@ export function Badge({
     warning:
       "bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20",
     neutral:
-      "bg-[var(--bg-surface)] text-[var(--text-primary)] border border-[var(--border)]",
+      "bg-(--bg-surface) text-(--text-primary) border border-(--border)",
     outline:
-      "bg-transparent text-[var(--text-secondary)] border border-[var(--border)]",
+      "bg-transparent text-(--text-secondary) border border-(--border)",
   };
 
   return (

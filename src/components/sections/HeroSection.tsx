@@ -112,17 +112,17 @@ export function HeroSection() {
             </div>
 
             {/* 3D Tactile Social Contact Buttons (Quso.ai inspired) */}
-            <div className="pt-6 border-t border-(--border) flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6">
+            <div className="pt-6 border-t border-(--border) flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-5">
               <span className="text-xs text-(--text-muted) font-mono tracking-wider uppercase font-semibold">
                 Direct Channels:
               </span>
-              <div className="flex items-center gap-3 sm:gap-4">
+              <div className="flex items-center gap-3 sm:gap-3.5">
                 {/* GitHub 3D Button */}
                 <a
                   href={personalData.socials.github}
                   target="_blank"
                   rel="noreferrer"
-                  className="btn-3d animate-float-1 w-11 h-11 sm:w-12 sm:h-12 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 bg-linear-to-b from-white via-slate-50 to-slate-100 dark:from-slate-800 dark:via-slate-850 dark:to-slate-900 flex items-center justify-center text-slate-800 dark:text-slate-100 group cursor-pointer"
+                  className="btn-3d animate-float-1 w-11 h-11 sm:w-12 sm:h-12 text-slate-800 dark:text-white group cursor-pointer hover:border-slate-400 dark:hover:border-slate-500"
                   aria-label="GitHub Profile"
                   title="GitHub Profile"
                 >
@@ -134,7 +134,7 @@ export function HeroSection() {
                   href={personalData.socials.linkedin}
                   target="_blank"
                   rel="noreferrer"
-                  className="btn-3d animate-float-2 w-11 h-11 sm:w-12 sm:h-12 rounded-2xl border border-blue-200/80 dark:border-blue-900/40 bg-linear-to-b from-white via-blue-50/40 to-blue-50/80 dark:from-slate-800 dark:via-blue-950/30 dark:to-slate-900 flex items-center justify-center text-[#0A66C2] group cursor-pointer"
+                  className="btn-3d animate-float-2 w-11 h-11 sm:w-12 sm:h-12 text-[#0A66C2] dark:text-[#38BDF8] group cursor-pointer hover:border-[#0A66C2]/60"
                   aria-label="LinkedIn Profile"
                   title="LinkedIn Profile"
                 >
@@ -146,7 +146,7 @@ export function HeroSection() {
                   href={personalData.socials.whatsapp}
                   target="_blank"
                   rel="noreferrer"
-                  className="btn-3d animate-float-3 w-11 h-11 sm:w-12 sm:h-12 rounded-2xl border border-emerald-200/80 dark:border-emerald-900/40 bg-linear-to-b from-white via-emerald-50/40 to-emerald-50/80 dark:from-slate-800 dark:via-emerald-950/30 dark:to-slate-900 flex items-center justify-center text-[#25D366] group cursor-pointer"
+                  className="btn-3d animate-float-3 w-11 h-11 sm:w-12 sm:h-12 text-[#25D366] group cursor-pointer hover:border-[#25D366]/60"
                   aria-label="WhatsApp Direct Chat"
                   title="WhatsApp Direct Chat"
                 >
@@ -156,7 +156,7 @@ export function HeroSection() {
                 {/* Email 3D Button */}
                 <a
                   href={personalData.socials.email}
-                  className="btn-3d animate-float-4 w-11 h-11 sm:w-12 sm:h-12 rounded-2xl border border-indigo-200/80 dark:border-indigo-900/40 bg-linear-to-b from-white via-indigo-50/40 to-indigo-50/80 dark:from-slate-800 dark:via-indigo-950/30 dark:to-slate-900 flex items-center justify-center text-indigo-500 group cursor-pointer"
+                  className="btn-3d animate-float-4 w-11 h-11 sm:w-12 sm:h-12 text-[#6366F1] dark:text-[#818CF8] group cursor-pointer hover:border-[#6366F1]/60"
                   aria-label="Send Direct Email"
                   title="Send Direct Email"
                 >

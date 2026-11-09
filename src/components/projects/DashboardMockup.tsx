@@ -35,22 +35,22 @@ export function DashboardMockup({
       className={`rounded-2xl border border-(--border-strong) bg-(--bg-surface) shadow-2xl overflow-hidden font-sans text-xs select-none ${className}`}
     >
       {/* Top Application Bar - Clean macOS styling like Image 1 */}
-      <div className="flex items-center justify-between px-4 py-2.5 border-b border-(--border) bg-(--bg-elevated)/80 backdrop-blur-md">
-        <div className="flex items-center gap-3">
-          <div className="flex items-center gap-1.5">
+      <div className="flex items-center justify-between px-3 sm:px-4 py-2 sm:py-2.5 border-b border-(--border) bg-(--bg-elevated)/80 backdrop-blur-md gap-2">
+        <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+          <div className="flex items-center gap-1.5 shrink-0">
             <div className="w-2.5 h-2.5 rounded-full bg-rose-500/80" />
             <div className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
             <div className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
           </div>
-          <div className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-md bg-(--bg-base) border border-(--border) text-[11px] font-mono text-(--text-secondary)">
-            <span className="text-emerald-500">https://</span>
-            <span>app.ravsaheb.internal/{type}</span>
+          <div className="hidden md:flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-(--bg-base) border border-(--border) text-[10px] font-mono text-(--text-secondary) truncate max-w-[160px]">
+            <span className="text-emerald-500 shrink-0">https://</span>
+            <span className="truncate">app.ravsaheb.internal/{type}</span>
           </div>
         </div>
-        <div className="flex items-center gap-2">
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-            {badge}
+        <div className="flex items-center gap-2 shrink-0">
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 shrink-0 whitespace-nowrap">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse shrink-0" />
+            <span>{badge}</span>
           </span>
         </div>
       </div>
@@ -153,48 +153,51 @@ function renderMockupBody(type: DashboardMockupProps["type"]) {
 
     case "crm":
       return (
-        <div className="grid grid-cols-3 gap-2.5">
-          <div className="p-2.5 rounded-xl border border-(--border) bg-(--bg-base) space-y-2">
-            <div className="flex items-center justify-between text-[11px] font-semibold text-(--text-secondary)">
-              <span>Qualified (4)</span>
-              <span className="font-mono text-[10px]">₹4.2L</span>
+        <div className="grid grid-cols-3 gap-2">
+          {/* Column 1: Qualified */}
+          <div className="p-2 sm:p-2.5 rounded-xl border border-(--border) bg-(--bg-base) flex flex-col justify-between">
+            <div className="flex items-center justify-between text-[10px] font-semibold text-(--text-secondary) gap-1 mb-1.5">
+              <span className="truncate">Qualified (4)</span>
+              <span className="font-mono text-[9px] text-(--accent) font-bold shrink-0">₹4.2L</span>
             </div>
-            <div className="p-2.5 rounded-lg border border-(--border) bg-(--bg-surface) space-y-1 shadow-xs">
-              <div className="font-semibold text-(--text-primary)">Apex Logistics Ltd</div>
-              <div className="text-[10px] text-(--text-secondary)">Fleet ERP Integration</div>
-              <div className="flex justify-between items-center text-[10px] pt-1.5 border-t border-(--border)">
-                <span className="text-indigo-600 dark:text-indigo-400 font-bold">₹1,80,000</span>
-                <span className="text-amber-500 font-medium">High Intent</span>
+            <div className="p-2 rounded-lg border border-(--border) bg-(--bg-surface) space-y-1 shadow-xs">
+              <div className="font-semibold text-(--text-primary) text-[11px] truncate">Apex Logistics</div>
+              <div className="text-[9px] text-(--text-muted) truncate">Fleet ERP Sync</div>
+              <div className="flex items-center justify-between gap-1 pt-1.5 border-t border-(--border) text-[9px]">
+                <span className="text-indigo-600 dark:text-indigo-400 font-bold font-mono">₹1.8L</span>
+                <span className="px-1.5 py-0.5 rounded text-[8px] font-semibold bg-amber-500/15 text-amber-500 whitespace-nowrap">High Intent</span>
               </div>
             </div>
           </div>
 
-          <div className="p-2.5 rounded-xl border border-(--border) bg-(--bg-base) space-y-2">
-            <div className="flex items-center justify-between text-[11px] font-semibold text-(--text-secondary)">
-              <span>Proposal (2)</span>
-              <span className="font-mono text-[10px]">₹7.5L</span>
+          {/* Column 2: Proposal */}
+          <div className="p-2 sm:p-2.5 rounded-xl border border-(--border) bg-(--bg-base) flex flex-col justify-between">
+            <div className="flex items-center justify-between text-[10px] font-semibold text-(--text-secondary) gap-1 mb-1.5">
+              <span className="truncate">Proposal (2)</span>
+              <span className="font-mono text-[9px] text-(--accent) font-bold shrink-0">₹7.5L</span>
             </div>
-            <div className="p-2.5 rounded-lg border border-(--border) bg-(--bg-surface) space-y-1 shadow-xs">
-              <div className="font-semibold text-(--text-primary)">Metro Healthcare</div>
-              <div className="text-[10px] text-(--text-secondary)">Clinic Portal & EMR</div>
-              <div className="flex justify-between items-center text-[10px] pt-1.5 border-t border-(--border)">
-                <span className="text-indigo-600 dark:text-indigo-400 font-bold">₹4,50,000</span>
-                <span className="text-indigo-500 font-medium">Reviewing</span>
+            <div className="p-2 rounded-lg border border-(--border) bg-(--bg-surface) space-y-1 shadow-xs">
+              <div className="font-semibold text-(--text-primary) text-[11px] truncate">Metro Health</div>
+              <div className="text-[9px] text-(--text-muted) truncate">Clinic Portal</div>
+              <div className="flex items-center justify-between gap-1 pt-1.5 border-t border-(--border) text-[9px]">
+                <span className="text-indigo-600 dark:text-indigo-400 font-bold font-mono">₹4.5L</span>
+                <span className="px-1.5 py-0.5 rounded text-[8px] font-semibold bg-indigo-500/15 text-indigo-500 whitespace-nowrap">Reviewing</span>
               </div>
             </div>
           </div>
 
-          <div className="p-2.5 rounded-xl border border-emerald-500/20 bg-emerald-500/5 space-y-2">
-            <div className="flex items-center justify-between text-[11px] font-semibold text-emerald-600 dark:text-emerald-400">
-              <span>Won Deals</span>
-              <span className="font-mono text-[10px]">₹12.8L</span>
+          {/* Column 3: Won Deals */}
+          <div className="p-2 sm:p-2.5 rounded-xl border border-emerald-500/20 bg-emerald-500/5 flex flex-col justify-between">
+            <div className="flex items-center justify-between text-[10px] font-semibold text-emerald-600 dark:text-emerald-400 gap-1 mb-1.5">
+              <span className="truncate">Won Deals</span>
+              <span className="font-mono text-[9px] font-bold shrink-0">₹12.8L</span>
             </div>
-            <div className="p-2.5 rounded-lg border border-emerald-500/20 bg-(--bg-surface) space-y-1 shadow-xs">
-              <div className="font-semibold text-(--text-primary)">Omni Retail Group</div>
-              <div className="text-[10px] text-(--text-secondary)">Multi-Store Inventory</div>
-              <div className="flex justify-between items-center text-[10px] pt-1.5 border-t border-(--border)">
-                <span className="text-emerald-600 dark:text-emerald-400 font-bold">₹5,20,000</span>
-                <span className="text-emerald-500 font-semibold">Active</span>
+            <div className="p-2 rounded-lg border border-emerald-500/20 bg-(--bg-surface) space-y-1 shadow-xs">
+              <div className="font-semibold text-(--text-primary) text-[11px] truncate">Omni Retail</div>
+              <div className="text-[9px] text-(--text-muted) truncate">Multi-Store App</div>
+              <div className="flex items-center justify-between gap-1 pt-1.5 border-t border-(--border) text-[9px]">
+                <span className="text-emerald-600 dark:text-emerald-400 font-bold font-mono">₹5.2L</span>
+                <span className="px-1.5 py-0.5 rounded text-[8px] font-semibold bg-emerald-500/15 text-emerald-500 whitespace-nowrap">Active</span>
               </div>
             </div>
           </div>
@@ -253,34 +256,34 @@ function renderMockupBody(type: DashboardMockupProps["type"]) {
 
     case "kanban":
       return (
-        <div className="grid grid-cols-3 gap-2.5">
-          <div className="p-2.5 rounded-xl border border-(--border) bg-(--bg-base) space-y-1.5">
-            <div className="text-[10px] font-bold text-(--text-secondary)">
+        <div className="grid grid-cols-3 gap-2">
+          <div className="p-2 sm:p-2.5 rounded-xl border border-(--border) bg-(--bg-base) space-y-1.5 flex flex-col justify-between">
+            <div className="text-[10px] font-bold text-(--text-secondary) truncate">
               Sprint Backlog (3)
             </div>
-            <div className="p-2 rounded-lg border border-(--border) bg-(--bg-surface) text-[10px] shadow-xs">
-              <div className="font-semibold text-(--text-primary)">
-                Payroll Tax Engine v2
+            <div className="p-2 rounded-lg border border-(--border) bg-(--bg-surface) text-[10px] shadow-xs space-y-1">
+              <div className="font-semibold text-(--text-primary) truncate">
+                Payroll Tax Engine
               </div>
-              <div className="text-[9px] text-(--text-muted) mt-1">High Priority • 8 pts</div>
+              <div className="text-[9px] text-(--text-muted) truncate">Priority • 8 pts</div>
             </div>
           </div>
-          <div className="p-2.5 rounded-xl border border-indigo-500/20 bg-indigo-500/5 space-y-1.5">
-            <div className="text-[10px] font-bold text-indigo-500">In Development (2)</div>
-            <div className="p-2 rounded-lg border border-indigo-500/20 bg-(--bg-surface) text-[10px] shadow-xs">
-              <div className="font-semibold text-(--text-primary)">
-                Bio-metric Sync Webhook
+          <div className="p-2 sm:p-2.5 rounded-xl border border-indigo-500/20 bg-indigo-500/5 space-y-1.5 flex flex-col justify-between">
+            <div className="text-[10px] font-bold text-indigo-500 truncate">In Progress (2)</div>
+            <div className="p-2 rounded-lg border border-indigo-500/20 bg-(--bg-surface) text-[10px] shadow-xs space-y-1">
+              <div className="font-semibold text-(--text-primary) truncate">
+                Biometric Sync
               </div>
-              <div className="text-[9px] text-indigo-500 mt-1">Ravsaheb K. • 5 pts</div>
+              <div className="text-[9px] text-indigo-500 truncate">Ravsaheb • 5 pts</div>
             </div>
           </div>
-          <div className="p-2.5 rounded-xl border border-emerald-500/20 bg-emerald-500/5 space-y-1.5">
-            <div className="text-[10px] font-bold text-emerald-500">Verified QA (6)</div>
-            <div className="p-2 rounded-lg border border-emerald-500/20 bg-(--bg-surface) text-[10px] shadow-xs">
-              <div className="font-semibold text-(--text-primary)">
-                JWT Auth & Session Guards
+          <div className="p-2 sm:p-2.5 rounded-xl border border-emerald-500/20 bg-emerald-500/5 space-y-1.5 flex flex-col justify-between">
+            <div className="text-[10px] font-bold text-emerald-500 truncate">Verified QA (6)</div>
+            <div className="p-2 rounded-lg border border-emerald-500/20 bg-(--bg-surface) text-[10px] shadow-xs space-y-1">
+              <div className="font-semibold text-(--text-primary) truncate">
+                JWT Auth & RBAC
               </div>
-              <div className="text-[9px] text-emerald-600 mt-1">Passed • Merged</div>
+              <div className="text-[9px] text-emerald-600 truncate">Passed • Merged</div>
             </div>
           </div>
         </div>

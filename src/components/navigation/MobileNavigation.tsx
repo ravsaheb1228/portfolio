@@ -50,18 +50,19 @@ export function MobileNavigation() {
             <Link
               href="/"
               onClick={() => setIsOpen(false)}
-              className="flex items-center gap-2.5 font-bold tracking-tight text-lg text-(--text-primary)"
+              className="flex items-center transition-transform hover:scale-105 active:scale-95 duration-200"
+              aria-label="Ravsaheb Khairnar - Homepage"
             >
-              <div className="relative h-8 w-18 rounded-lg overflow-hidden border border-(--border-strong) bg-[#040816] flex items-center justify-center shadow-md">
+              <div className="relative h-9 w-22">
                 <Image
-                  src={personalData.logo}
+                  src="/images/rk-logo.png"
                   alt="RK Logo"
-                  width={72}
-                  height={32}
-                  className="h-full w-full object-contain p-0.5"
+                  fill
+                  sizes="88px"
+                  className="object-contain filter drop-shadow-sm"
+                  priority
                 />
               </div>
-              <span>{personalData.name}</span>
             </Link>
 
             <button

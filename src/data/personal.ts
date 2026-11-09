@@ -3,7 +3,7 @@ export const personalData = {
   initials: "RK",
   title: "UI/UX Designer & Software Developer",
   avatar: "/images/profile.jpg",
-  logo: "/images/rk-logo.jpg",
+  logo: "/images/rk-logo.png",
   roles: [
     "UI/UX Designer",
     "Frontend Developer",

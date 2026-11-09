@@ -52,17 +52,17 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Col 1: Brand & Bio */}
           <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="inline-flex items-center gap-3">
-              <div className="relative h-9 w-20 rounded-xl overflow-hidden border border-(--border-strong) bg-[#040816] flex items-center justify-center shadow-md">
+            <Link href="/" className="inline-flex items-center gap-3 group">
+              <div className="relative h-10 w-24">
                 <Image
-                  src={personalData.logo}
+                  src="/images/rk-logo.png"
                   alt="RK Logo"
-                  width={80}
-                  height={36}
-                  className="h-full w-full object-contain p-0.5"
+                  fill
+                  sizes="96px"
+                  className="object-contain filter drop-shadow-sm transition-transform duration-200 group-hover:scale-105"
                 />
               </div>
-              <span className="font-bold text-lg text-(--text-primary)">
+              <span className="font-bold text-lg text-(--text-primary) group-hover:text-(--accent) transition-colors">
                 {personalData.name}
               </span>
             </Link>

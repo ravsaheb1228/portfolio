@@ -12,29 +12,21 @@ export function Navbar() {
     <header className="sticky top-0 z-40 w-full border-b border-(--border) bg-(--bg-base)/80 backdrop-blur-md transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
-          {/* Logo & Brand Identity */}
+          {/* Brand Logo with direct link to Home */}
           <Link
             href="/"
-            className="group flex items-center gap-3 focus-visible:outline-2 focus-visible:outline-(--accent) rounded-lg"
+            className="group flex items-center focus-visible:outline-2 focus-visible:outline-(--accent) rounded-xl transition-transform hover:scale-105 active:scale-95 duration-200 py-1"
             aria-label={`${personalData.name} - Homepage`}
           >
-            <div className="relative h-9 sm:h-10 w-20 sm:w-22 rounded-xl overflow-hidden border border-(--border-strong) bg-[#040816] flex items-center justify-center shadow-md shadow-blue-950/20 group-hover:scale-105 group-hover:border-(--accent) transition-all">
+            <div className="relative h-10 sm:h-12 w-22 sm:w-28">
               <Image
-                src={personalData.logo}
+                src="/images/rk-logo.png"
                 alt="RK Logo"
-                width={88}
-                height={40}
-                className="h-full w-full object-contain p-0.5"
+                fill
+                sizes="(max-width: 640px) 88px, 112px"
+                className="object-contain filter drop-shadow-sm transition-all duration-300 group-hover:brightness-110"
                 priority
               />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-bold text-sm sm:text-base tracking-tight text-(--text-primary) group-hover:text-(--accent) transition-colors">
-                {personalData.name}
-              </span>
-              <span className="text-[11px] font-medium text-(--text-secondary) hidden sm:inline-block leading-tight">
-                UI/UX & Software Solutions
-              </span>
             </div>
           </Link>
 

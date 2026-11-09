@@ -3,35 +3,39 @@
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *, .dark, .dark *));
 
 :root {
-  /* Light mode defaults */
+  /* Light mode defaults - Clerio & Quso inspired clean crystalline palette */
   --bg-base: #f8fafc;
   --bg-surface: #ffffff;
   --bg-elevated: #f1f5f9;
-  --text-primary: #111827;
-  --text-secondary: #64748b;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
   --text-muted: #94a3b8;
-  --accent: #2563eb;
-  --accent-hover: #1d4ed8;
-  --accent-subtle: rgba(37, 99, 235, 0.1);
+  --accent: #4f46e5;
+  --accent-hover: #4338ca;
+  --accent-subtle: rgba(79, 70, 229, 0.08);
+  --accent-gradient: linear-gradient(135deg, #4f46e5 0%, #6366f1 50%, #7c3aed 100%);
   --border: #e2e8f0;
   --border-strong: #cbd5e1;
-  --card-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.06);
+  --card-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.05), 0 4px 10px -2px rgba(15, 23, 42, 0.02);
+  --dot-color: rgba(99, 102, 241, 0.12);
 }
 
 .dark {
-  /* Dark mode palette */
-  --bg-base: #0b1020;
-  --bg-surface: #111827;
-  --bg-elevated: #182235;
+  /* Dark mode palette - Deep enterprise obsidian with electric indigo/cobalt accents */
+  --bg-base: #060913;
+  --bg-surface: #0c1120;
+  --bg-elevated: #131b2e;
   --text-primary: #f8fafc;
-  --text-secondary: #a1aec0;
+  --text-secondary: #94a3b8;
   --text-muted: #64748b;
-  --accent: #3b82f6;
-  --accent-hover: #60a5fa;
-  --accent-subtle: rgba(59, 130, 246, 0.15);
-  --border: #263449;
-  --border-strong: #334460;
-  --card-shadow: 0 4px 25px -2px rgba(0, 0, 0, 0.45);
+  --accent: #6366f1;
+  --accent-hover: #818cf8;
+  --accent-subtle: rgba(99, 102, 241, 0.15);
+  --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #6366f1 50%, #8b5cf6 100%);
+  --border: #1e293b;
+  --border-strong: #334155;
+  --card-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.55), 0 0 30px -10px rgba(99, 102, 241, 0.12);
+  --dot-color: rgba(99, 102, 241, 0.16);
 }
 
 html {
@@ -66,15 +70,39 @@ body {
   background: var(--accent);
 }
 
+/* Micro-dot constellation background (Quso & Clerio aesthetic) */
+.bg-dot-pattern {
+  background-size: 24px 24px;
+  background-image: radial-gradient(circle, var(--dot-color) 1.2px, transparent 1.2px);
+}
+
 /* Subtle grid pattern background */
 .bg-grid-pattern {
-  background-size: 32px 32px;
+  background-size: 36px 36px;
   background-image: 
     linear-gradient(to right, var(--border) 1px, transparent 1px),
     linear-gradient(to bottom, var(--border) 1px, transparent 1px);
 }
 
-/* Glow effects */
+/* Concentric rings background inspired by Image 3 */
+.bg-radial-rings {
+  background-image: 
+    radial-gradient(circle at 50% 0%, var(--accent-subtle) 0%, transparent 65%),
+    radial-gradient(circle at 50% 50%, transparent 40%, var(--border) 40.5%, transparent 41%),
+    radial-gradient(circle at 50% 50%, transparent 60%, var(--border) 60.5%, transparent 61%);
+}
+
+/* Ethereal Glow effects */
 .glow-accent {
-  box-shadow: 0 0 40px -10px var(--accent-subtle);
+  box-shadow: 0 0 50px -10px var(--accent-subtle);
+}
+
+.glow-btn {
+  box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.4);
+}
+
+/* Smooth glass backdrop */
+.glass-panel {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }

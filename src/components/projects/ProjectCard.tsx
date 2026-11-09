@@ -22,28 +22,28 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
   return (
     <Card
       hoverEffect
-      className={`group flex flex-col justify-between overflow-hidden border border-(--border) bg-(--bg-surface) hover:border-(--accent)/50 transition-all ${
+      className={`group flex flex-col justify-between overflow-hidden rounded-2xl border border-(--border) bg-(--bg-surface) hover:border-indigo-500/40 hover:shadow-xl transition-all duration-300 ${
         featured ? "lg:col-span-2" : ""
       }`}
     >
       <div>
         {/* Conceptual Visual Preview / Mockup */}
-        <div className="relative p-3 sm:p-4 bg-(--bg-elevated) border-b border-(--border) overflow-hidden">
+        <div className="relative p-3.5 sm:p-5 bg-(--bg-elevated) border-b border-(--border) overflow-hidden">
           <DashboardMockup
             type={project.mockupType}
             title={project.title}
             badge={project.status}
-            className="transform group-hover:scale-[1.01] transition-transform duration-300"
+            className="transform group-hover:scale-[1.015] transition-transform duration-300 shadow-md"
           />
         </div>
 
         {/* Card Content Header */}
         <div className="p-5 sm:p-6 space-y-4">
           <div className="flex items-center justify-between gap-2">
-            <Badge variant="outline" className="text-[11px] font-mono">
+            <Badge variant="outline" className="text-[11px] font-mono rounded-full">
               {project.category}
             </Badge>
-            <Badge variant={statusVariant} size="sm" className="font-semibold">
+            <Badge variant={statusVariant} size="sm" className="font-semibold rounded-full">
               {project.status}
             </Badge>
           </div>
@@ -62,13 +62,13 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
             <div className="text-[11px] font-mono uppercase tracking-wider text-(--text-muted) font-semibold">
               Core Capabilities
             </div>
-            <ul className="space-y-1">
+            <ul className="space-y-1.5">
               {project.keyFeatures.slice(0, 3).map((feat, idx) => (
                 <li
                   key={idx}
                   className="flex items-start gap-2 text-xs text-(--text-secondary)"
                 >
-                  <CheckCircle2 className="w-3.5 h-3.5 text-(--accent) shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-indigo-500 shrink-0 mt-0.5" />
                   <span className="line-clamp-1">{feat}</span>
                 </li>
               ))}
@@ -80,13 +80,13 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
             {project.techStack.slice(0, 4).map((tech, idx) => (
               <span
                 key={idx}
-                className="px-2 py-0.5 rounded text-[11px] bg-(--bg-elevated) text-(--text-secondary) border border-(--border)"
+                className="px-2.5 py-0.5 rounded-full text-[11px] bg-(--bg-elevated) text-(--text-secondary) border border-(--border)"
               >
                 {tech.name}
               </span>
             ))}
             {project.techStack.length > 4 && (
-              <span className="px-2 py-0.5 rounded text-[11px] bg-(--bg-elevated) text-(--text-muted) border border-(--border)">
+              <span className="px-2.5 py-0.5 rounded-full text-[11px] bg-(--bg-elevated) text-(--text-muted) border border-(--border)">
                 +{project.techStack.length - 4} more
               </span>
             )}
@@ -98,7 +98,7 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
       <div className="px-5 sm:px-6 py-4 border-t border-(--border) bg-(--bg-base)/50 flex items-center justify-between">
         <Link
           href={`/projects/${project.slug}`}
-          className="inline-flex items-center gap-1.5 text-xs font-semibold text-(--accent) hover:underline"
+          className="inline-flex items-center gap-1.5 text-xs font-semibold text-(--accent) group-hover:underline"
         >
           <span>Architecture & Details</span>
           <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />

@@ -1,11 +1,12 @@
 import Link from "next/link";
+import Image from "next/image";
 import { personalData } from "@/data/personal";
 import { navItems, projectInquiryCategories } from "@/data/navigation";
 import { servicesData } from "@/data/services";
 import { Button } from "@/components/ui/Button";
 import {
   Mail,
-    ArrowRight,
+  ArrowRight,
   MapPin,
 } from "lucide-react";
 import { Github, Linkedin, WhatsApp } from "@/components/ui/Icons";
@@ -52,8 +53,14 @@ export function Footer() {
           {/* Col 1: Brand & Bio */}
           <div className="lg:col-span-2 space-y-4">
             <Link href="/" className="inline-flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl bg-linear-to-br from-blue-600 to-indigo-700 text-white font-bold flex items-center justify-center shadow-md">
-                {personalData.initials}
+              <div className="relative h-9 w-20 rounded-xl overflow-hidden border border-(--border-strong) bg-[#040816] flex items-center justify-center shadow-md">
+                <Image
+                  src={personalData.logo}
+                  alt="RK Logo"
+                  width={80}
+                  height={36}
+                  className="h-full w-full object-contain p-0.5"
+                />
               </div>
               <span className="font-bold text-lg text-(--text-primary)">
                 {personalData.name}

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { personalData } from "@/data/personal";
 import { DesktopNavigation } from "@/components/navigation/DesktopNavigation";
 import { MobileNavigation } from "@/components/navigation/MobileNavigation";
@@ -17,8 +18,15 @@ export function Navbar() {
             className="group flex items-center gap-3 focus-visible:outline-2 focus-visible:outline-(--accent) rounded-lg"
             aria-label={`${personalData.name} - Homepage`}
           >
-            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-linear-to-br from-blue-600 to-indigo-700 text-white font-bold text-sm sm:text-base flex items-center justify-center shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform">
-              {personalData.initials}
+            <div className="relative h-9 sm:h-10 w-20 sm:w-22 rounded-xl overflow-hidden border border-(--border-strong) bg-[#040816] flex items-center justify-center shadow-md shadow-blue-950/20 group-hover:scale-105 group-hover:border-(--accent) transition-all">
+              <Image
+                src={personalData.logo}
+                alt="RK Logo"
+                width={88}
+                height={40}
+                className="h-full w-full object-contain p-0.5"
+                priority
+              />
             </div>
             <div className="flex flex-col">
               <span className="font-bold text-sm sm:text-base tracking-tight text-(--text-primary) group-hover:text-(--accent) transition-colors">

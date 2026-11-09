@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { navItems } from "@/data/navigation";
@@ -51,8 +52,14 @@ export function MobileNavigation() {
               onClick={() => setIsOpen(false)}
               className="flex items-center gap-2.5 font-bold tracking-tight text-lg text-(--text-primary)"
             >
-              <div className="w-8 h-8 rounded-lg bg-(--accent) text-white flex items-center justify-center font-bold text-sm shadow-md">
-                {personalData.initials}
+              <div className="relative h-8 w-18 rounded-lg overflow-hidden border border-(--border-strong) bg-[#040816] flex items-center justify-center shadow-md">
+                <Image
+                  src={personalData.logo}
+                  alt="RK Logo"
+                  width={72}
+                  height={32}
+                  className="h-full w-full object-contain p-0.5"
+                />
               </div>
               <span>{personalData.name}</span>
             </Link>

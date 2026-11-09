@@ -1,6 +1,8 @@
 export type ProjectStatus = "Planned" | "In Progress" | "Completed";
 
 export type ProjectCategory =
+  | "Artificial Intelligence & SaaS"
+  | "Web3 & Blockchain"
   | "Human Resources"
   | "Retail / Manufacturing"
   | "Sales / Marketing"
@@ -60,7 +62,7 @@ export interface SkillCategory {
 export interface Achievement {
   id: string;
   title: string;
-  category: "Education" | "Certification" | "Milestone";
+  category: "Education" | "Certification" | "Milestone" | "Extracurricular";
   issuer: string;
   date: string;
   description: string;

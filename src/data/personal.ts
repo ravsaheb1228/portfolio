@@ -14,8 +14,8 @@ export const personalData = {
   subheadline:
     "I design intuitive digital experiences and develop scalable software solutions that help businesses streamline operations, improve productivity and grow through technology.",
   professionalSummary:
-    "I am a Computer Science professional passionate about designing meaningful user experiences and developing practical software solutions. I enjoy transforming complex requirements into intuitive interfaces and functional applications using modern web technologies.",
-  location: "Mumbai, India",
+    "Motivated Computer Science graduate with hands-on experience in full-stack development using MERN and Python. Skilled in building responsive, scalable, and user-friendly applications. Passionate about leveraging AI and modern technologies to deliver innovative digital solutions.",
+  location: "Goregaon, Mumbai, India",
   availability: {
     status: "Available for Projects",
     isAvailable: true,
@@ -34,7 +34,7 @@ export const personalData = {
     whatsapp: "https://wa.me/918591281388?text=Hello%20Ravsaheb%2C%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project.",
   },
   resume: {
-    viewUrl: "/resume/Ravsaheb_Khairnar_Resume.pdf",
+    viewUrl: "/resume.pdf",
     downloadFileName: "Ravsaheb_Khairnar_Resume.pdf",
   },
   aboutPoints: [

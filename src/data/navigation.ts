@@ -3,7 +3,16 @@ export interface NavItem {
   href: string;
 }
 
+// User specified: Keep just Business Solutions, Services, and Contact in navbar (+ Resume tab)
 export const navItems: NavItem[] = [
+  { title: "Business Solutions", href: "/business-solutions" },
+  { title: "Services", href: "/services" },
+  { title: "Contact", href: "/contact" },
+  { title: "Resume", href: "/resume" },
+];
+
+// Full site directory for footer navigation sitemap
+export const footerNavItems: NavItem[] = [
   { title: "Home", href: "/" },
   { title: "About", href: "/about" },
   { title: "Experience", href: "/experience" },
@@ -12,6 +21,7 @@ export const navItems: NavItem[] = [
   { title: "Services", href: "/services" },
   { title: "Achievements", href: "/achievements" },
   { title: "Contact", href: "/contact" },
+  { title: "Resume (PDF)", href: "/resume" },
 ];
 
 export const projectInquiryCategories = [

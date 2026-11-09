@@ -2,6 +2,91 @@ import { Project } from "@/types";
 
 export const projectsData: Project[] = [
   {
+    id: "proj-ai-platform",
+    slug: "ai-powered-application-platform",
+    title: "AI-Powered Application Platform",
+    category: "Artificial Intelligence & SaaS",
+    status: "Completed",
+    shortDescription:
+      "Full-stack AI SaaS integrating Chat with PDF, Resume Builder, YouTube Video Summarizer, code generation, and multi-modal text-to-image/video/audio tools.",
+    overview:
+      "A comprehensive, production-deployed full-stack AI platform combining frontier generative AI capabilities into an intuitive SaaS suite. It features interactive Chat with PDF, an intelligent Resume Builder, YouTube Video Summarization, and multimodal media generation.",
+    businessProblem:
+      "Users and teams struggle with fragmented AI services, juggling multiple subscriptions, and dealing with clunky workflows when analyzing documents and generating media.",
+    proposedSolution:
+      "A centralized AI workspace delivering fast, high-performance generative tools with an accessible modern interface, server-side Python AI inference pipelines, and persistent MongoDB storage.",
+    keyFeatures: [
+      "Chat with PDF documents using embeddings and semantic retrieval",
+      "Interactive AI Resume Builder with export and tailored formatting",
+      "YouTube Video Summarizer extracting transcripts and key highlights",
+      "Multi-modal generation: code, text-to-image, text-to-video, and text-to-audio",
+      "Fast backend services powered by Python APIs and MongoDB",
+      "Modern, responsive user interface built with Next.js, React, and Tailwind CSS",
+      "Optimized deployment on Vercel for scalable cloud hosting",
+    ],
+    techStack: [
+      { name: "Next.js", role: "Frontend application & App Router" },
+      { name: "React", role: "Component UI architecture" },
+      { name: "TypeScript", role: "End-to-end type safety" },
+      { name: "Python", role: "AI inference and API services" },
+      { name: "Tailwind CSS", role: "Responsive styling & dark/light theme" },
+      { name: "MongoDB", role: "Document storage and prompt histories" },
+    ],
+    architectureOverview:
+      "Modern full-stack architecture leveraging Next.js on Vercel for instant edge delivery paired with high-performance Python backend endpoints for compute-heavy AI tasks and document parsing.",
+    developmentChallenges: [
+      "Orchestrating multi-model API streaming responses without browser buffering lag.",
+      "Parsing complex PDF layouts into clean text chunks for semantic question answering.",
+    ],
+    myContribution: [
+      "Engineered the complete application from UI design in Figma to Next.js full-stack implementation.",
+      "Built the Python backend microservices and integrated MongoDB for persistent storage.",
+      "Deployed and configured continuous delivery pipelines on Vercel.",
+    ],
+    mockupType: "dashboard",
+  },
+  {
+    id: "proj-web3-crowdfunding",
+    slug: "web3-blockchain-crowdfunding-platform",
+    title: "Web3 Blockchain Crowdfunding Platform",
+    category: "Web3 & Blockchain",
+    status: "Completed",
+    shortDescription:
+      "Decentralized crowdfunding platform enabling users to create and fund campaigns transparently through Ethereum blockchain smart contracts.",
+    overview:
+      "A decentralized Web3 crowdfunding hub designed to bring radical transparency and trust to project funding using Ethereum smart contracts, Web3.js, and non-custodial crypto wallet interactions.",
+    businessProblem:
+      "Traditional crowdfunding intermediaries impose high transaction commissions, maintain opaque fund release policies, and frequently delay disbursements to creators.",
+    proposedSolution:
+      "A trustless, decentralized platform running Solidity smart contracts directly on Ethereum, guaranteeing tamper-proof escrow and transparent fund allocation.",
+    keyFeatures: [
+      "Decentralized campaign creation and contribution workflows",
+      "Immutable Solidity smart contracts ensuring secure, transparent transactions",
+      "Web3.js integration bridging the React frontend with the Ethereum blockchain",
+      "Real-time campaign status, financial metrics, and donor history",
+      "Secure crypto wallet connections (MetaMask) and transaction sign-offs",
+      "Responsive and interactive user interface designed with React and Tailwind CSS",
+    ],
+    techStack: [
+      { name: "React", role: "Interactive frontend interface" },
+      { name: "Tailwind CSS", role: "Modern Web3 aesthetics & components" },
+      { name: "Web3.js", role: "Ethereum blockchain connection library" },
+      { name: "Solidity", role: "Smart contract development & verification" },
+    ],
+    architectureOverview:
+      "Decentralized dApp architecture where campaign states are verified on-chain via EVM smart contracts, paired with a lightweight, responsive React client for seamless wallet connectivity.",
+    developmentChallenges: [
+      "Optimizing Solidity smart contract gas fees for micro-donations.",
+      "Handling erratic wallet connection drops and network switching gracefully.",
+    ],
+    myContribution: [
+      "Authored, tested, and deployed Solidity smart contracts on the Ethereum testnet.",
+      "Integrated Web3.js for seamless transaction submission and state synchronization.",
+      "Crafted high-converting, clean UI in React with live campaign progress indicators.",
+    ],
+    mockupType: "finance",
+  },
+  {
     id: "proj-01",
     slug: "hr-management-system",
     title: "HR Management System",

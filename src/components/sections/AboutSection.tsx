@@ -66,6 +66,10 @@ export function AboutSection() {
                   <ShieldCheck className="w-4 h-4 text-emerald-500 shrink-0" />
                   <span>Udemy Web Development Certified (Aug 2024)</span>
                 </div>
+                <div className="flex items-center gap-3 text-xs text-(--text-secondary)">
+                  <ShieldCheck className="w-4 h-4 text-cyan-500 shrink-0" />
+                  <span>IIT Bombay JavaScript Certified (Score: 75%)</span>
+                </div>
               </div>
 
               <div className="mt-6 pt-4 flex flex-col sm:flex-row gap-3">

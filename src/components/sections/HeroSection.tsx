@@ -20,12 +20,12 @@ const TECH_ECOSYSTEM = [
   { name: "Next.js 16", category: "Framework" },
   { name: "React 19", category: "Frontend" },
   { name: "TypeScript", category: "Language" },
+  { name: "Python", category: "Backend & AI" },
   { name: "Tailwind CSS v4", category: "Design" },
   { name: "Node.js & Express", category: "Backend" },
-  { name: "PostgreSQL & Prisma", category: "Database" },
   { name: "MongoDB & Mongoose", category: "Database" },
-  { name: "Figma Design Systems", category: "UI/UX" },
-  { name: "AI Agent Workflows", category: "AI / Co-Pilot" },
+  { name: "Figma Systems", category: "UI/UX" },
+  { name: "Google Gemini AI", category: "Generative AI" },
 ];
 
 export function HeroSection() {

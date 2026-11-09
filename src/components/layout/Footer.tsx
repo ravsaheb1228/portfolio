@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { personalData } from "@/data/personal";
-import { navItems, projectInquiryCategories } from "@/data/navigation";
+import { footerNavItems, projectInquiryCategories } from "@/data/navigation";
 import { servicesData } from "@/data/services";
 import { Button } from "@/components/ui/Button";
 import {
@@ -123,7 +123,7 @@ export function Footer() {
               Navigation
             </h3>
             <ul className="space-y-2 text-sm">
-              {navItems.map((item) => (
+              {footerNavItems.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}

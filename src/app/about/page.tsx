@@ -90,12 +90,30 @@ export default function AboutPage() {
                 </div>
               </div>
               <div className="flex items-start gap-2.5">
+                <GraduationCap className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" />
+                <div>
+                  <strong className="text-(--text-primary) block">
+                    Higher Secondary Certificate (HSC)
+                  </strong>
+                  <span>Dadasaheb Digambar Shankar Rao Patil College, Jalgaon (2021 – 2022)</span>
+                </div>
+              </div>
+              <div className="flex items-start gap-2.5">
                 <ShieldCheck className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
                 <div>
                   <strong className="text-(--text-primary) block">
                     Web Development Certification
                   </strong>
                   <span>Udemy • August 2024</span>
+                </div>
+              </div>
+              <div className="flex items-start gap-2.5">
+                <ShieldCheck className="w-4 h-4 text-cyan-500 shrink-0 mt-0.5" />
+                <div>
+                  <strong className="text-(--text-primary) block">
+                    JavaScript Training Certificate (Score: 75%)
+                  </strong>
+                  <span>Spoken Tutorial Project, IIT Bombay • November 2023</span>
                 </div>
               </div>
             </div>

@@ -8,7 +8,7 @@ import { navItems } from "@/data/navigation";
 import { personalData } from "@/data/personal";
 import { Button } from "@/components/ui/Button";
 import { ThemeToggle } from "@/components/theme/ThemeToggle";
-import { Menu, X, ArrowRight, Mail } from "lucide-react";
+import { Menu, X, ArrowRight, Mail, FileText } from "lucide-react";
 import { Github, Linkedin, WhatsApp } from "@/components/ui/Icons";
 import { cn } from "@/lib/utils";
 
@@ -96,7 +96,10 @@ export function MobileNavigation() {
                       : "text-(--text-secondary) hover:text-(--text-primary) hover:bg-(--bg-elevated)"
                   )}
                 >
-                  <span>{item.title}</span>
+                  <span className="flex items-center gap-2">
+                    {item.title === "Resume" && <FileText className="w-4 h-4 text-(--accent)" />}
+                    <span>{item.title}</span>
+                  </span>
                   <ArrowRight className="w-4 h-4 opacity-50" />
                 </Link>
               );

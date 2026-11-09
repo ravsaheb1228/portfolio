@@ -145,40 +145,40 @@ export function MobileNavigation() {
               Discuss Your Project
             </Button>
 
-            <div className="flex items-center justify-center gap-4 pt-2 text-(--text-secondary)">
+            <div className="flex items-center justify-center gap-3.5 pt-2">
               <a
                 href={personalData.socials.github}
                 target="_blank"
                 rel="noreferrer"
-                className="p-2 rounded-lg hover:text-(--text-primary) hover:bg-(--bg-elevated)"
+                className="btn-3d w-11 h-11 rounded-xl border border-slate-200/80 dark:border-slate-700/60 bg-linear-to-b from-white via-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900 flex items-center justify-center text-slate-800 dark:text-slate-100 group"
                 aria-label="GitHub Profile"
               >
-                <Github className="w-5 h-5" />
+                <Github className="w-5 h-5 transition-transform group-hover:scale-110" />
               </a>
               <a
                 href={personalData.socials.linkedin}
                 target="_blank"
                 rel="noreferrer"
-                className="p-2 rounded-lg hover:text-(--text-primary) hover:bg-(--bg-elevated)"
+                className="btn-3d w-11 h-11 rounded-xl border border-blue-200/80 dark:border-blue-900/40 bg-linear-to-b from-white via-blue-50/40 to-blue-50/80 dark:from-slate-800 dark:to-slate-900 flex items-center justify-center text-[#0A66C2] group"
                 aria-label="LinkedIn Profile"
               >
-                <Linkedin className="w-5 h-5" />
+                <Linkedin className="w-5 h-5 transition-transform group-hover:scale-110" />
               </a>
               <a
                 href={personalData.socials.whatsapp}
                 target="_blank"
                 rel="noreferrer"
-                className="p-2 rounded-lg hover:text-emerald-500 hover:bg-(--bg-elevated)"
+                className="btn-3d w-11 h-11 rounded-xl border border-emerald-200/80 dark:border-emerald-900/40 bg-linear-to-b from-white via-emerald-50/40 to-emerald-50/80 dark:from-slate-800 dark:to-slate-900 flex items-center justify-center text-[#25D366] group"
                 aria-label="WhatsApp Chat"
               >
-                <WhatsApp className="w-5 h-5 text-emerald-500" />
+                <WhatsApp className="w-5 h-5 transition-transform group-hover:scale-110" />
               </a>
               <a
                 href={personalData.socials.email}
-                className="p-2 rounded-lg hover:text-(--text-primary) hover:bg-(--bg-elevated)"
+                className="btn-3d w-11 h-11 rounded-xl border border-indigo-200/80 dark:border-indigo-900/40 bg-linear-to-b from-white via-indigo-50/40 to-indigo-50/80 dark:from-slate-800 dark:to-slate-900 flex items-center justify-center text-indigo-500 group"
                 aria-label="Send direct email"
               >
-                <Mail className="w-5 h-5" />
+                <Mail className="w-5 h-5 transition-transform group-hover:scale-110" />
               </a>
             </div>
           </div>

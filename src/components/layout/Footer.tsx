@@ -78,41 +78,41 @@ export function Footer() {
               <span>{personalData.location}</span>
             </div>
 
-            {/* Social Icons */}
+            {/* 3D Social Icons */}
             <div className="pt-2 flex items-center gap-3">
               <a
                 href={personalData.socials.github}
                 target="_blank"
                 rel="noreferrer"
-                className="w-9 h-9 rounded-lg border border-(--border) bg-(--bg-elevated) flex items-center justify-center text-(--text-secondary) hover:text-(--accent) hover:border-(--accent) transition-colors"
+                className="btn-3d w-10 h-10 rounded-xl border border-slate-200/80 dark:border-slate-700/60 bg-linear-to-b from-white via-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900 flex items-center justify-center text-slate-800 dark:text-slate-100 group"
                 aria-label="GitHub profile"
               >
-                <Github className="w-4 h-4" />
+                <Github className="w-4 h-4 transition-transform group-hover:scale-110" />
               </a>
               <a
                 href={personalData.socials.linkedin}
                 target="_blank"
                 rel="noreferrer"
-                className="w-9 h-9 rounded-lg border border-(--border) bg-(--bg-elevated) flex items-center justify-center text-(--text-secondary) hover:text-(--accent) hover:border-(--accent) transition-colors"
+                className="btn-3d w-10 h-10 rounded-xl border border-blue-200/80 dark:border-blue-900/40 bg-linear-to-b from-white via-blue-50/40 to-blue-50/80 dark:from-slate-800 dark:to-slate-900 flex items-center justify-center text-[#0A66C2] group"
                 aria-label="LinkedIn profile"
               >
-                <Linkedin className="w-4 h-4" />
+                <Linkedin className="w-4 h-4 transition-transform group-hover:scale-110" />
               </a>
               <a
                 href={personalData.socials.whatsapp}
                 target="_blank"
                 rel="noreferrer"
-                className="w-9 h-9 rounded-lg border border-(--border) bg-(--bg-elevated) flex items-center justify-center text-(--text-secondary) hover:text-emerald-500 hover:border-emerald-500 transition-colors"
+                className="btn-3d w-10 h-10 rounded-xl border border-emerald-200/80 dark:border-emerald-900/40 bg-linear-to-b from-white via-emerald-50/40 to-emerald-50/80 dark:from-slate-800 dark:to-slate-900 flex items-center justify-center text-[#25D366] group"
                 aria-label="WhatsApp conversation"
               >
-                <WhatsApp className="w-4 h-4" />
+                <WhatsApp className="w-4 h-4 transition-transform group-hover:scale-110" />
               </a>
               <a
                 href={personalData.socials.email}
-                className="w-9 h-9 rounded-lg border border-(--border) bg-(--bg-elevated) flex items-center justify-center text-(--text-secondary) hover:text-(--accent) hover:border-(--accent) transition-colors"
+                className="btn-3d w-10 h-10 rounded-xl border border-indigo-200/80 dark:border-indigo-900/40 bg-linear-to-b from-white via-indigo-50/40 to-indigo-50/80 dark:from-slate-800 dark:to-slate-900 flex items-center justify-center text-indigo-500 group"
                 aria-label="Email directly"
               >
-                <Mail className="w-4 h-4" />
+                <Mail className="w-4 h-4 transition-transform group-hover:scale-110" />
               </a>
             </div>
           </div>

@@ -4,7 +4,6 @@ import React from "react";
 import Image from "next/image";
 import { personalData } from "@/data/personal";
 import { Button } from "@/components/ui/Button";
-import { Badge } from "@/components/ui/Badge";
 import { DashboardMockup } from "@/components/projects/DashboardMockup";
 import {
   ArrowRight,
@@ -46,7 +45,7 @@ export function HeroSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Top Mini Pill Badge */}
         <div className="flex justify-center lg:justify-start mb-6">
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-indigo-500/30 bg-indigo-500/10 dark:bg-indigo-950/40 backdrop-blur-md text-xs font-medium text-indigo-700 dark:text-indigo-300 shadow-sm">
+          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-indigo-500/30 bg-indigo-500/10 dark:bg-indigo-950/40 backdrop-blur-md text-xs font-medium text-indigo-700 dark:text-indigo-300 shadow-sm transition-transform hover:scale-105 duration-300">
             <span className="flex h-2 w-2 relative">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
@@ -84,7 +83,7 @@ export function HeroSection() {
                 href="/projects"
                 variant="primary"
                 size="lg"
-                className="glow-btn shadow-lg"
+                className="glow-btn shadow-lg transition-transform hover:scale-105 active:scale-95 duration-200"
               >
                 <span>Explore My Work</span>
                 <ArrowRight className="w-4 h-4 ml-1" />
@@ -95,72 +94,74 @@ export function HeroSection() {
                 external
                 variant="secondary"
                 size="lg"
-                className="gap-2 border-emerald-500/30 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-500/10 hover:border-emerald-500/50"
+                className="gap-2 border-emerald-500/30 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-500/10 hover:border-emerald-500/50 transition-transform hover:scale-105 active:scale-95 duration-200"
               >
                 <WhatsApp className="w-4 h-4 text-emerald-500" />
                 <span>Chat on WhatsApp</span>
               </Button>
 
               <Button
-                href={personalData.resume.viewUrl}
-                external
+                href="/resume"
                 variant="outline"
                 size="lg"
-                className="gap-2 hover:border-(--accent) hover:text-(--accent)"
+                className="gap-2 hover:border-(--accent) hover:text-(--accent) transition-transform hover:scale-105 active:scale-95 duration-200"
               >
                 <Download className="w-4 h-4 text-(--accent)" />
                 <span>Resume</span>
               </Button>
             </div>
 
-            {/* Social Links & Trust Badges */}
-            <div className="pt-4 border-t border-(--border) flex flex-wrap items-center justify-center lg:justify-between gap-4">
-              <div className="flex items-center gap-3">
-                <span className="text-xs text-(--text-muted) font-mono">Connect:</span>
+            {/* 3D Tactile Social Contact Buttons (Quso.ai inspired) */}
+            <div className="pt-6 border-t border-(--border) flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6">
+              <span className="text-xs text-(--text-muted) font-mono tracking-wider uppercase font-semibold">
+                Direct Channels:
+              </span>
+              <div className="flex items-center gap-3 sm:gap-4">
+                {/* GitHub 3D Button */}
                 <a
                   href={personalData.socials.github}
                   target="_blank"
                   rel="noreferrer"
-                  className="p-2 rounded-xl border border-(--border) bg-(--bg-surface) text-(--text-secondary) hover:text-(--accent) hover:border-(--accent) transition-all hover:scale-105"
-                  aria-label="GitHub"
+                  className="btn-3d animate-float-1 w-11 h-11 sm:w-12 sm:h-12 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 bg-linear-to-b from-white via-slate-50 to-slate-100 dark:from-slate-800 dark:via-slate-850 dark:to-slate-900 flex items-center justify-center text-slate-800 dark:text-slate-100 group cursor-pointer"
+                  aria-label="GitHub Profile"
+                  title="GitHub Profile"
                 >
-                  <Github className="w-4 h-4" />
+                  <Github className="w-5 h-5 transition-transform duration-200 group-hover:scale-115" />
                 </a>
+
+                {/* LinkedIn 3D Button */}
                 <a
                   href={personalData.socials.linkedin}
                   target="_blank"
                   rel="noreferrer"
-                  className="p-2 rounded-xl border border-(--border) bg-(--bg-surface) text-(--text-secondary) hover:text-(--accent) hover:border-(--accent) transition-all hover:scale-105"
-                  aria-label="LinkedIn"
+                  className="btn-3d animate-float-2 w-11 h-11 sm:w-12 sm:h-12 rounded-2xl border border-blue-200/80 dark:border-blue-900/40 bg-linear-to-b from-white via-blue-50/40 to-blue-50/80 dark:from-slate-800 dark:via-blue-950/30 dark:to-slate-900 flex items-center justify-center text-[#0A66C2] group cursor-pointer"
+                  aria-label="LinkedIn Profile"
+                  title="LinkedIn Profile"
                 >
-                  <Linkedin className="w-4 h-4" />
+                  <Linkedin className="w-5 h-5 transition-transform duration-200 group-hover:scale-115" />
                 </a>
+
+                {/* WhatsApp 3D Button */}
                 <a
                   href={personalData.socials.whatsapp}
                   target="_blank"
                   rel="noreferrer"
-                  className="p-2 rounded-xl border border-(--border) bg-(--bg-surface) text-(--text-secondary) hover:text-emerald-500 hover:border-emerald-500 transition-all hover:scale-105"
-                  aria-label="WhatsApp"
+                  className="btn-3d animate-float-3 w-11 h-11 sm:w-12 sm:h-12 rounded-2xl border border-emerald-200/80 dark:border-emerald-900/40 bg-linear-to-b from-white via-emerald-50/40 to-emerald-50/80 dark:from-slate-800 dark:via-emerald-950/30 dark:to-slate-900 flex items-center justify-center text-[#25D366] group cursor-pointer"
+                  aria-label="WhatsApp Direct Chat"
+                  title="WhatsApp Direct Chat"
                 >
-                  <WhatsApp className="w-4 h-4 text-emerald-500" />
+                  <WhatsApp className="w-5 h-5 transition-transform duration-200 group-hover:scale-115" />
                 </a>
+
+                {/* Email 3D Button */}
                 <a
                   href={personalData.socials.email}
-                  className="p-2 rounded-xl border border-(--border) bg-(--bg-surface) text-(--text-secondary) hover:text-(--accent) hover:border-(--accent) transition-all hover:scale-105"
-                  aria-label="Email"
+                  className="btn-3d animate-float-4 w-11 h-11 sm:w-12 sm:h-12 rounded-2xl border border-indigo-200/80 dark:border-indigo-900/40 bg-linear-to-b from-white via-indigo-50/40 to-indigo-50/80 dark:from-slate-800 dark:via-indigo-950/30 dark:to-slate-900 flex items-center justify-center text-indigo-500 group cursor-pointer"
+                  aria-label="Send Direct Email"
+                  title="Send Direct Email"
                 >
-                  <Mail className="w-4 h-4" />
+                  <Mail className="w-5 h-5 transition-transform duration-200 group-hover:scale-115" />
                 </a>
-              </div>
-
-              {/* Roles Badges */}
-              <div className="flex items-center gap-2">
-                <Badge variant="accent" size="sm">
-                  Full-Stack Architecture
-                </Badge>
-                <Badge variant="default" size="sm">
-                  Design Systems
-                </Badge>
               </div>
             </div>
           </div>
@@ -168,12 +169,12 @@ export function HeroSection() {
           {/* Right Column: Hero Visual Dashboard Mockup (Clerio & Quso inspired) */}
           <div className="lg:col-span-5 relative mt-6 lg:mt-0">
             {/* Ambient Backlight under mockup */}
-            <div className="absolute -inset-4 bg-linear-to-tr from-blue-600/20 via-indigo-500/15 to-purple-500/20 rounded-3xl blur-2xl -z-10" />
+            <div className="absolute -inset-4 bg-linear-to-tr from-blue-600/20 via-indigo-500/15 to-purple-500/20 rounded-3xl blur-2xl -z-10 animate-pulse duration-1000" />
 
             {/* Central Layered Container */}
             <div className="relative">
               {/* Floating Pill Top Left: Clerio-style Metric */}
-              <div className="absolute -top-5 -left-4 z-20 hidden sm:flex items-center gap-2.5 px-3.5 py-2 rounded-2xl border border-indigo-500/20 bg-(--bg-surface)/95 shadow-xl backdrop-blur-md">
+              <div className="absolute -top-5 -left-4 z-20 hidden sm:flex items-center gap-2.5 px-3.5 py-2 rounded-2xl border border-indigo-500/20 bg-(--bg-surface)/95 shadow-xl backdrop-blur-md animate-float-1">
                 <div className="w-7 h-7 rounded-xl bg-indigo-500/10 text-indigo-500 flex items-center justify-center shrink-0">
                   <TrendingUp className="w-4 h-4" />
                 </div>
@@ -187,7 +188,7 @@ export function HeroSection() {
               </div>
 
               {/* Floating Pill Top Right: AI Co-Pilot Widget */}
-              <div className="absolute -top-5 -right-3 z-20 hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-2xl border border-purple-500/20 bg-(--bg-surface)/95 shadow-xl backdrop-blur-md">
+              <div className="absolute -top-5 -right-3 z-20 hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-2xl border border-purple-500/20 bg-(--bg-surface)/95 shadow-xl backdrop-blur-md animate-float-2">
                 <div className="w-6 h-6 rounded-lg bg-linear-to-tr from-indigo-600 to-purple-600 text-white flex items-center justify-center shrink-0 shadow-sm">
                   <Sparkles className="w-3.5 h-3.5" />
                 </div>
@@ -206,7 +207,7 @@ export function HeroSection() {
               />
 
               {/* Floating Card Bottom Left: Ravsaheb Portrait & Status */}
-              <div className="absolute -bottom-5 -left-4 z-20 hidden sm:flex items-center gap-3 px-3.5 py-2.5 rounded-2xl border border-(--border-strong) bg-(--bg-surface)/95 shadow-xl backdrop-blur-md">
+              <div className="absolute -bottom-5 -left-4 z-20 hidden sm:flex items-center gap-3 px-3.5 py-2.5 rounded-2xl border border-(--border-strong) bg-(--bg-surface)/95 shadow-xl backdrop-blur-md animate-float-3">
                 <div className="relative w-9 h-9 rounded-full overflow-hidden border border-blue-500/40 shrink-0">
                   <Image
                     src={personalData.avatar}
@@ -224,7 +225,7 @@ export function HeroSection() {
               </div>
 
               {/* Floating Pill Bottom Right: Architecture Quality */}
-              <div className="absolute -bottom-5 -right-3 z-20 hidden sm:flex items-center gap-2 px-3 py-2 rounded-2xl border border-blue-500/20 bg-(--bg-surface)/95 shadow-xl backdrop-blur-md">
+              <div className="absolute -bottom-5 -right-3 z-20 hidden sm:flex items-center gap-2 px-3 py-2 rounded-2xl border border-blue-500/20 bg-(--bg-surface)/95 shadow-xl backdrop-blur-md animate-float-4">
                 <div className="w-6 h-6 rounded-lg bg-blue-500/10 text-blue-500 flex items-center justify-center shrink-0">
                   <ShieldCheck className="w-3.5 h-3.5" />
                 </div>
@@ -249,7 +250,7 @@ export function HeroSection() {
             {TECH_ECOSYSTEM.map((tech) => (
               <div
                 key={tech.name}
-                className="group inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-(--border) bg-(--bg-surface) hover:border-(--accent) hover:bg-(--bg-elevated) transition-all text-xs font-medium text-(--text-secondary) hover:text-(--text-primary) shadow-xs hover:scale-105"
+                className="group inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-(--border) bg-(--bg-surface) hover:border-(--accent) hover:bg-(--bg-elevated) transition-all text-xs font-medium text-(--text-secondary) hover:text-(--text-primary) shadow-xs hover:scale-105 duration-200"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-(--accent)/60 group-hover:bg-(--accent)" />
                 <span>{tech.name}</span>

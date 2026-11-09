@@ -110,60 +110,6 @@ export function HeroSection() {
                 <span>Resume</span>
               </Button>
             </div>
-
-            {/* 3D Tactile Social Contact Buttons (Quso.ai inspired) */}
-            <div className="pt-6 border-t border-(--border) flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-5">
-              <span className="text-xs text-(--text-muted) font-mono tracking-wider uppercase font-semibold">
-                Direct Channels:
-              </span>
-              <div className="flex items-center gap-3 sm:gap-3.5">
-                {/* GitHub 3D Button */}
-                <a
-                  href={personalData.socials.github}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn-3d animate-float-1 w-11 h-11 sm:w-12 sm:h-12 text-slate-800 dark:text-white group cursor-pointer hover:border-slate-400 dark:hover:border-slate-500"
-                  aria-label="GitHub Profile"
-                  title="GitHub Profile"
-                >
-                  <Github className="w-5 h-5 transition-transform duration-200 group-hover:scale-115" />
-                </a>
-
-                {/* LinkedIn 3D Button */}
-                <a
-                  href={personalData.socials.linkedin}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn-3d animate-float-2 w-11 h-11 sm:w-12 sm:h-12 text-[#0A66C2] dark:text-[#38BDF8] group cursor-pointer hover:border-[#0A66C2]/60"
-                  aria-label="LinkedIn Profile"
-                  title="LinkedIn Profile"
-                >
-                  <Linkedin className="w-5 h-5 transition-transform duration-200 group-hover:scale-115" />
-                </a>
-
-                {/* WhatsApp 3D Button */}
-                <a
-                  href={personalData.socials.whatsapp}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn-3d animate-float-3 w-11 h-11 sm:w-12 sm:h-12 text-[#25D366] group cursor-pointer hover:border-[#25D366]/60"
-                  aria-label="WhatsApp Direct Chat"
-                  title="WhatsApp Direct Chat"
-                >
-                  <WhatsApp className="w-5 h-5 transition-transform duration-200 group-hover:scale-115" />
-                </a>
-
-                {/* Email 3D Button */}
-                <a
-                  href={personalData.socials.email}
-                  className="btn-3d animate-float-4 w-11 h-11 sm:w-12 sm:h-12 text-[#6366F1] dark:text-[#818CF8] group cursor-pointer hover:border-[#6366F1]/60"
-                  aria-label="Send Direct Email"
-                  title="Send Direct Email"
-                >
-                  <Mail className="w-5 h-5 transition-transform duration-200 group-hover:scale-115" />
-                </a>
-              </div>
-            </div>
           </div>
 
           {/* Right Column: Hero Visual Dashboard Mockup (Clerio & Quso inspired) */}
@@ -238,8 +184,57 @@ export function HeroSection() {
           </div>
         </div>
 
+        {/* 3D Tactile Social Contact Buttons Centered Horizontally on Page (Inspired by Quso.ai Reference 4) */}
+        <div className="mt-12 sm:mt-16 flex items-center justify-center gap-4 sm:gap-6">
+          {/* GitHub 3D Button */}
+          <a
+            href={personalData.socials.github}
+            target="_blank"
+            rel="noreferrer"
+            className="btn-3d animate-float-1 w-12 h-12 sm:w-14 sm:h-14 text-slate-800 dark:text-white group cursor-pointer hover:border-slate-400 dark:hover:border-slate-500"
+            aria-label="GitHub Profile"
+            title="GitHub Profile"
+          >
+            <Github className="w-5 h-5 sm:w-6 sm:h-6 transition-transform duration-200 group-hover:scale-115" />
+          </a>
+
+          {/* LinkedIn 3D Button */}
+          <a
+            href={personalData.socials.linkedin}
+            target="_blank"
+            rel="noreferrer"
+            className="btn-3d animate-float-2 w-12 h-12 sm:w-14 sm:h-14 text-[#0A66C2] dark:text-[#38BDF8] group cursor-pointer hover:border-[#0A66C2]/60"
+            aria-label="LinkedIn Profile"
+            title="LinkedIn Profile"
+          >
+            <Linkedin className="w-5 h-5 sm:w-6 sm:h-6 transition-transform duration-200 group-hover:scale-115" />
+          </a>
+
+          {/* WhatsApp 3D Button */}
+          <a
+            href={personalData.socials.whatsapp}
+            target="_blank"
+            rel="noreferrer"
+            className="btn-3d animate-float-3 w-12 h-12 sm:w-14 sm:h-14 text-[#25D366] group cursor-pointer hover:border-[#25D366]/60"
+            aria-label="WhatsApp Direct Chat"
+            title="WhatsApp Direct Chat"
+          >
+            <WhatsApp className="w-5 h-5 sm:w-6 sm:h-6 transition-transform duration-200 group-hover:scale-115" />
+          </a>
+
+          {/* Email 3D Button */}
+          <a
+            href={personalData.socials.email}
+            className="btn-3d animate-float-4 w-12 h-12 sm:w-14 sm:h-14 text-[#6366F1] dark:text-[#818CF8] group cursor-pointer hover:border-[#6366F1]/60"
+            aria-label="Send Direct Email"
+            title="Send Direct Email"
+          >
+            <Mail className="w-5 h-5 sm:w-6 sm:h-6 transition-transform duration-200 group-hover:scale-115" />
+          </a>
+        </div>
+
         {/* Tech Ecosystem Orbit Bar (Inspired by Reference 3: "The Tech Partner For Growing Companies") */}
-        <div className="mt-16 sm:mt-24 pt-8 border-t border-(--border)">
+        <div className="mt-12 sm:mt-16 pt-8 border-t border-(--border)">
           <div className="text-center mb-5">
             <span className="text-xs font-mono uppercase tracking-widest text-(--text-muted)">
               Core Technical Ecosystem & Specializations

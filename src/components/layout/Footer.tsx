@@ -16,7 +16,7 @@ export function Footer() {
   return (
     <footer className="border-t border-(--border) bg-(--bg-surface) text-(--text-primary) transition-colors duration-200">
       {/* Pre-footer Call to Action Banner */}
-      <div className="border-b border-(--border) bg-gradient-to-b from-(--bg-base) to-(--bg-surface) py-14 sm:py-20">
+      <div className="border-b border-(--border) bg-linear-to-b from-(--bg-base) to-(--bg-surface) py-14 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20 mb-4">
             <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
@@ -52,7 +52,7 @@ export function Footer() {
           {/* Col 1: Brand & Bio */}
           <div className="lg:col-span-2 space-y-4">
             <Link href="/" className="inline-flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 text-white font-bold flex items-center justify-center shadow-md">
+              <div className="w-9 h-9 rounded-xl bg-linear-to-br from-blue-600 to-indigo-700 text-white font-bold flex items-center justify-center shadow-md">
                 {personalData.initials}
               </div>
               <span className="font-bold text-lg text-(--text-primary)">

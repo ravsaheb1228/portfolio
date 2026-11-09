@@ -19,7 +19,7 @@ export function HeroSection() {
   return (
     <section className="relative overflow-hidden pt-12 pb-20 sm:pt-16 sm:pb-28 lg:pt-24 lg:pb-36 bg-grid-pattern">
       {/* Background ambient gradient glow */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-gradient-to-tr from-blue-600/20 to-indigo-500/10 blur-[130px] rounded-full pointer-events-none -z-10" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-linear-to-tr from-blue-600/20 to-indigo-500/10 blur-[130px] rounded-full pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
@@ -27,7 +27,7 @@ export function HeroSection() {
           <div className="lg:col-span-7 space-y-6 sm:space-y-8 text-left">
             {/* Availability & Profile Quick Badge */}
             <div className="flex flex-wrap items-center gap-3">
-              <div className="relative w-12 h-12 rounded-full p-0.5 bg-gradient-to-tr from-blue-600 via-indigo-600 to-cyan-400 shrink-0 shadow-md">
+              <div className="relative w-12 h-12 rounded-full p-0.5 bg-linear-to-tr from-blue-600 via-indigo-600 to-cyan-400 shrink-0 shadow-md">
                 <Image
                   src={personalData.avatar}
                   alt={personalData.name}
@@ -56,7 +56,7 @@ export function HeroSection() {
               </div>
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-(--text-primary) leading-[1.12]">
                 Designing Digital Experiences.{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-indigo-400 to-cyan-400">
+                <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-500 via-indigo-400 to-cyan-400">
                   Engineering Powerful Business Solutions.
                 </span>
               </h1>

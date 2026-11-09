@@ -34,7 +34,7 @@ export default function AboutPage() {
         {/* Left Column: Portrait & Highlights */}
         <div className="lg:col-span-5 space-y-6">
           <Card className="p-6 sm:p-8 space-y-6 bg-(--bg-surface)">
-            <div className="relative w-36 h-36 sm:w-44 sm:h-44 mx-auto rounded-full p-1 bg-gradient-to-tr from-blue-600 via-indigo-600 to-cyan-400 shadow-2xl">
+            <div className="relative w-36 h-36 sm:w-44 sm:h-44 mx-auto rounded-full p-1 bg-linear-to-tr from-blue-600 via-indigo-600 to-cyan-400 shadow-2xl">
               <Image
                 src={personalData.avatar}
                 alt={personalData.name}

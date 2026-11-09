@@ -27,7 +27,7 @@ export function WorkflowSection() {
             >
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="font-mono text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-500">
+                  <span className="font-mono text-2xl font-black text-transparent bg-clip-text bg-linear-to-r from-blue-500 to-indigo-500">
                     {stage.step}
                   </span>
                   <span className="text-[10px] uppercase font-mono tracking-wider px-2 py-0.5 rounded bg-(--bg-elevated) text-(--text-muted) border border-(--border)">

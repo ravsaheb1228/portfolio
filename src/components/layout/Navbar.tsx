@@ -17,7 +17,7 @@ export function Navbar() {
             className="group flex items-center gap-3 focus-visible:outline-2 focus-visible:outline-(--accent) rounded-lg"
             aria-label={`${personalData.name} - Homepage`}
           >
-            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 text-white font-bold text-sm sm:text-base flex items-center justify-center shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-linear-to-br from-blue-600 to-indigo-700 text-white font-bold text-sm sm:text-base flex items-center justify-center shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform">
               {personalData.initials}
             </div>
             <div className="flex flex-col">

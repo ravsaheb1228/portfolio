@@ -239,7 +239,7 @@ function renderMockupBody(type: DashboardMockupProps["type"]) {
                 <div key={i} className="flex-1 flex flex-col items-center gap-1">
                   <div
                     style={{ height: `${height}%` }}
-                    className="w-full rounded-t bg-gradient-to-t from-blue-600 to-blue-400 opacity-90 transition-all hover:opacity-100"
+                    className="w-full rounded-t bg-linear-to-t from-blue-600 to-blue-400 opacity-90 transition-all hover:opacity-100"
                   />
                   <span className="text-[9px] text-(--text-muted) font-mono">
                     {["M1", "M2", "M3", "M4", "M5", "M6"][i]}

@@ -1,6 +1,6 @@
 import React from "react";
-import { Mail, MessageCircle, ArrowUpRight } from "lucide-react";
-import { Github, Linkedin } from "@/components/ui/Icons";
+import { Mail, ArrowUpRight } from "lucide-react";
+import { Github, Linkedin, WhatsApp } from "@/components/ui/Icons";
 import { personalData } from "@/data/personal";
 
 export function ContactMethodCard() {
@@ -14,21 +14,21 @@ export function ContactMethodCard() {
     },
     {
       title: "WhatsApp Chat",
-      value: "Quick Discussion",
+      value: personalData.contact.phone,
       href: personalData.socials.whatsapp,
-      icon: <MessageCircle className="w-5 h-5 text-emerald-500" />,
-      subtext: "Fastest response for urgent queries",
+      icon: <WhatsApp className="w-5 h-5 text-emerald-500" />,
+      subtext: "Fastest response for urgent queries & scoping",
     },
     {
       title: "LinkedIn",
-      value: "Ravsaheb Khairnar",
+      value: "linkedin.com/in/ravsaheb-khairnar",
       href: personalData.socials.linkedin,
       icon: <Linkedin className="w-5 h-5 text-sky-500" />,
       subtext: "Connect professionally & review background",
     },
     {
       title: "GitHub Repository",
-      value: "github.com/ravsaheb",
+      value: "github.com/ravsaheb1228",
       href: personalData.socials.github,
       icon: <Github className="w-5 h-5 text-[var(--text-primary)]" />,
       subtext: "Inspect open-source code & repositories",
@@ -63,7 +63,10 @@ export function ContactMethodCard() {
                     <span>{channel.title}</span>
                     <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
-                  <div className="text-[11px] text-[var(--text-secondary)]">
+                  <div className="text-[11px] text-[var(--accent)] font-mono">
+                    {channel.value}
+                  </div>
+                  <div className="text-[10px] text-[var(--text-secondary)]">
                     {channel.subtext}
                   </div>
                 </div>

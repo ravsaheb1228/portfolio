@@ -58,7 +58,7 @@ export async function POST(req: NextRequest) {
           },
           body: JSON.stringify({
             from: "Portfolio Inquiry <onboarding@resend.dev>",
-            to: process.env.NOTIFICATION_EMAIL || "ravsahebkhairnar@gmail.com",
+            to: process.env.NOTIFICATION_EMAIL || "ravsahebkhairnar1228@gmail.com",
             subject: `[New Inquiry] ${validatedData.projectCategory} from ${validatedData.fullName} (${validatedData.companyName})`,
             html: `
               <h2>New Project Inquiry</h2>

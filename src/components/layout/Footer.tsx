@@ -5,11 +5,10 @@ import { servicesData } from "@/data/services";
 import { Button } from "@/components/ui/Button";
 import {
   Mail,
-  MessageCircle,
-  ArrowRight,
+    ArrowRight,
   MapPin,
 } from "lucide-react";
-import { Github, Linkedin } from "@/components/ui/Icons";
+import { Github, Linkedin, WhatsApp } from "@/components/ui/Icons";
 
 export function Footer() {
   const currentYear = 2026;
@@ -99,7 +98,7 @@ export function Footer() {
                 className="w-9 h-9 rounded-lg border border-[var(--border)] bg-[var(--bg-elevated)] flex items-center justify-center text-[var(--text-secondary)] hover:text-emerald-500 hover:border-emerald-500 transition-colors"
                 aria-label="WhatsApp conversation"
               >
-                <MessageCircle className="w-4 h-4" />
+                <WhatsApp className="w-4 h-4" />
               </a>
               <a
                 href={personalData.socials.email}

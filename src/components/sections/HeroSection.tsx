@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { personalData } from "@/data/personal";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
@@ -9,11 +10,10 @@ import {
   ArrowRight,
   Download,
   Mail,
-  MessageCircle,
   Layers,
   Code2,
 } from "lucide-react";
-import { Github, Linkedin } from "@/components/ui/Icons";
+import { Github, Linkedin, WhatsApp } from "@/components/ui/Icons";
 
 export function HeroSection() {
   return (
@@ -25,14 +25,28 @@ export function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Left Column: Headline, Bio & Calls to Action */}
           <div className="lg:col-span-7 space-y-6 sm:space-y-8 text-left">
-            {/* Availability Pill */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-semibold tracking-wide">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span>{personalData.availability.status}</span>
-              <span className="text-[var(--text-muted)]">•</span>
-              <span className="text-xs font-normal text-[var(--text-secondary)]">
-                {personalData.availability.type}
-              </span>
+            {/* Availability & Profile Quick Badge */}
+            <div className="flex flex-wrap items-center gap-3">
+              <div className="relative w-12 h-12 rounded-full p-0.5 bg-gradient-to-tr from-blue-600 via-indigo-600 to-cyan-400 shrink-0 shadow-md">
+                <Image
+                  src={personalData.avatar}
+                  alt={personalData.name}
+                  width={48}
+                  height={48}
+                  className="w-full h-full rounded-full object-cover"
+                  priority
+                />
+                <span className="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-emerald-500 border-2 border-[var(--bg-base)]" />
+              </div>
+
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-semibold tracking-wide">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                <span>{personalData.availability.status}</span>
+                <span className="text-[var(--text-muted)]">•</span>
+                <span className="text-xs font-normal text-[var(--text-secondary)]">
+                  {personalData.availability.type}
+                </span>
+              </div>
             </div>
 
             {/* Main Headline */}
@@ -59,8 +73,15 @@ export function HeroSection() {
                 <span>Explore My Work</span>
                 <ArrowRight className="w-4 h-4 ml-1" />
               </Button>
-              <Button href="/contact" variant="secondary" size="lg">
-                <span>Let&apos;s Work Together</span>
+              <Button
+                href={personalData.contact.whatsapp}
+                external
+                variant="secondary"
+                size="lg"
+                className="gap-2 border-emerald-500/30 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-500/10 hover:border-emerald-500/50"
+              >
+                <WhatsApp className="w-4 h-4 text-emerald-500" />
+                <span>Chat on WhatsApp</span>
               </Button>
               <Button
                 href={personalData.resume.viewUrl}
@@ -103,7 +124,7 @@ export function HeroSection() {
                   className="p-2 rounded-lg border border-[var(--border)] bg-[var(--bg-surface)] text-[var(--text-secondary)] hover:text-emerald-500 hover:border-emerald-500 transition-colors"
                   aria-label="WhatsApp"
                 >
-                  <MessageCircle className="w-4 h-4" />
+                  <WhatsApp className="w-4 h-4 text-emerald-500" />
                 </a>
                 <a
                   href={personalData.socials.email}

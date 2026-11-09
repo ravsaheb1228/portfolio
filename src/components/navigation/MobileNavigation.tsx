@@ -8,7 +8,7 @@ import { personalData } from "@/data/personal";
 import { Button } from "@/components/ui/Button";
 import { ThemeToggle } from "@/components/theme/ThemeToggle";
 import { Menu, X, ArrowRight, Mail } from "lucide-react";
-import { Github, Linkedin } from "@/components/ui/Icons";
+import { Github, Linkedin, WhatsApp } from "@/components/ui/Icons";
 import { cn } from "@/lib/utils";
 
 export function MobileNavigation() {
@@ -114,10 +114,22 @@ export function MobileNavigation() {
           {/* Bottom Actions inside Drawer */}
           <div className="p-6 border-t border-[var(--border)] bg-[var(--bg-surface)] space-y-3">
             <Button
-              href="/contact"
+              href={personalData.contact.whatsapp}
+              external
               variant="primary"
               size="lg"
-              className="w-full shadow-lg"
+              className="w-full shadow-lg bg-emerald-600 hover:bg-emerald-500 gap-2"
+              onClick={() => setIsOpen(false)}
+            >
+              <WhatsApp className="w-4 h-4" />
+              <span>Chat on WhatsApp (+91 85912 81388)</span>
+            </Button>
+
+            <Button
+              href="/contact"
+              variant="secondary"
+              size="md"
+              className="w-full"
               onClick={() => setIsOpen(false)}
             >
               Discuss Your Project
@@ -141,6 +153,15 @@ export function MobileNavigation() {
                 aria-label="LinkedIn Profile"
               >
                 <Linkedin className="w-5 h-5" />
+              </a>
+              <a
+                href={personalData.socials.whatsapp}
+                target="_blank"
+                rel="noreferrer"
+                className="p-2 rounded-lg hover:text-emerald-500 hover:bg-[var(--bg-elevated)]"
+                aria-label="WhatsApp Chat"
+              >
+                <WhatsApp className="w-5 h-5 text-emerald-500" />
               </a>
               <a
                 href={personalData.socials.email}

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { personalData } from "@/data/personal";
 import { PageContainer } from "@/components/layout/PageContainer";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -12,6 +13,7 @@ import {
   Target,
   Sparkles,
 } from "lucide-react";
+import { WhatsApp } from "@/components/ui/Icons";
 
 export const metadata: Metadata = {
   title: "About Me",
@@ -32,15 +34,16 @@ export default function AboutPage() {
         {/* Left Column: Portrait & Highlights */}
         <div className="lg:col-span-5 space-y-6">
           <Card className="p-6 sm:p-8 space-y-6 bg-[var(--bg-surface)]">
-            <div className="w-28 h-28 mx-auto rounded-2xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-cyan-500 p-1 shadow-xl">
-              <div className="w-full h-full rounded-[14px] bg-[var(--bg-surface)] flex flex-col items-center justify-center">
-                <span className="text-3xl font-extrabold text-[var(--text-primary)]">
-                  {personalData.initials}
-                </span>
-                <span className="text-[10px] font-mono text-[var(--accent)] font-bold mt-1">
-                  FULL-STACK
-                </span>
-              </div>
+            <div className="relative w-36 h-36 sm:w-44 sm:h-44 mx-auto rounded-full p-1 bg-gradient-to-tr from-blue-600 via-indigo-600 to-cyan-400 shadow-2xl">
+              <Image
+                src={personalData.avatar}
+                alt={personalData.name}
+                width={176}
+                height={176}
+                className="w-full h-full rounded-full object-cover border-2 border-[var(--bg-surface)]"
+                priority
+              />
+              <span className="absolute bottom-1 right-2 w-5 h-5 rounded-full bg-emerald-500 border-2 border-[var(--bg-surface)] shadow-md" />
             </div>
 
             <div className="text-center space-y-1">
@@ -99,6 +102,16 @@ export default function AboutPage() {
 
             <div className="pt-2 flex flex-col gap-2.5">
               <Button
+                href={personalData.contact.whatsapp}
+                external
+                variant="primary"
+                size="md"
+                className="w-full gap-2 bg-emerald-600 hover:bg-emerald-500 text-white"
+              >
+                <WhatsApp className="w-4 h-4" />
+                <span>Quick WhatsApp Chat (+91 85912 81388)</span>
+              </Button>
+              <Button
                 href={personalData.resume.viewUrl}
                 external
                 variant="outline"
@@ -108,8 +121,8 @@ export default function AboutPage() {
                 <Download className="w-4 h-4 text-[var(--accent)]" />
                 <span>Download Resume (PDF)</span>
               </Button>
-              <Button href="/contact" variant="primary" size="md" className="w-full">
-                <span>Let&apos;s Work Together</span>
+              <Button href="/contact" variant="secondary" size="md" className="w-full">
+                <span>Submit Project Inquiry</span>
                 <ArrowRight className="w-4 h-4 ml-1" />
               </Button>
             </div>

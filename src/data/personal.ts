@@ -2,6 +2,7 @@ export const personalData = {
   name: "Ravsaheb Khairnar",
   initials: "RK",
   title: "UI/UX Designer & Software Developer",
+  avatar: "/images/profile.jpg",
   roles: [
     "UI/UX Designer",
     "Frontend Developer",
@@ -20,16 +21,16 @@ export const personalData = {
     type: "Contract / Full-time / Freelance",
   },
   contact: {
-    email: "ravsahebkhairnar@gmail.com",
-    phone: "+91 98765 43210", // Configurable placeholder
-    whatsapp: "https://wa.me/919876543210", // Configurable
-    meetingUrl: "https://calendly.com", // Configurable meeting link
+    email: "ravsahebkhairnar1228@gmail.com",
+    phone: "+91 85912 81388",
+    whatsapp: "https://wa.me/918591281388?text=Hello%20Ravsaheb%2C%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project.",
+    meetingUrl: "https://calendly.com",
   },
   socials: {
-    github: "https://github.com/ravsaheb",
-    linkedin: "https://linkedin.com/in/ravsaheb-khairnar",
-    email: "mailto:ravsahebkhairnar@gmail.com",
-    whatsapp: "https://wa.me/919876543210",
+    github: "https://github.com/ravsaheb1228",
+    linkedin: "https://www.linkedin.com/in/ravsaheb-khairnar/",
+    email: "mailto:ravsahebkhairnar1228@gmail.com",
+    whatsapp: "https://wa.me/918591281388?text=Hello%20Ravsaheb%2C%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project.",
   },
   resume: {
     viewUrl: "/resume/Ravsaheb_Khairnar_Resume.pdf",

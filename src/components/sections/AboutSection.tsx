@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { personalData } from "@/data/personal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -9,6 +10,7 @@ import {
   ArrowRight,
   ShieldCheck,
 } from "lucide-react";
+import { WhatsApp } from "@/components/ui/Icons";
 
 export function AboutSection() {
   return (
@@ -24,16 +26,17 @@ export function AboutSection() {
           {/* Left Column: Portrait & Credentials Box */}
           <div className="lg:col-span-5 space-y-6">
             <div className="relative rounded-2xl border border-[var(--border-strong)] bg-gradient-to-b from-[var(--bg-elevated)] to-[var(--bg-surface)] p-6 sm:p-8 overflow-hidden shadow-xl">
-              {/* Abstract Avatar Visual Placeholder */}
-              <div className="w-28 h-28 sm:w-32 sm:h-32 mx-auto rounded-2xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-cyan-500 p-1 shadow-2xl">
-                <div className="w-full h-full rounded-[14px] bg-[var(--bg-surface)] flex flex-col items-center justify-center">
-                  <span className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[var(--text-primary)]">
-                    {personalData.initials}
-                  </span>
-                  <span className="text-[10px] font-mono text-[var(--accent)] font-semibold mt-0.5">
-                    ARCHITECT
-                  </span>
-                </div>
+              {/* Profile Photo Visual */}
+              <div className="relative w-36 h-36 sm:w-44 sm:h-44 mx-auto rounded-full p-1 bg-gradient-to-tr from-blue-600 via-indigo-600 to-cyan-400 shadow-2xl">
+                <Image
+                  src={personalData.avatar}
+                  alt={personalData.name}
+                  width={176}
+                  height={176}
+                  className="w-full h-full rounded-full object-cover border-2 border-[var(--bg-surface)]"
+                  priority
+                />
+                <span className="absolute bottom-1 right-2 w-5 h-5 rounded-full bg-emerald-500 border-2 border-[var(--bg-surface)] shadow-md" />
               </div>
 
               {/* Bio summary in card */}
@@ -65,7 +68,17 @@ export function AboutSection() {
                 </div>
               </div>
 
-              <div className="mt-6 pt-4 flex gap-3">
+              <div className="mt-6 pt-4 flex flex-col sm:flex-row gap-3">
+                <Button
+                  href={personalData.contact.whatsapp}
+                  external
+                  variant="primary"
+                  size="sm"
+                  className="w-full gap-2 bg-emerald-600 hover:bg-emerald-500"
+                >
+                  <WhatsApp className="w-3.5 h-3.5" />
+                  <span>WhatsApp Chat</span>
+                </Button>
                 <Button
                   href={personalData.resume.viewUrl}
                   external
@@ -74,7 +87,7 @@ export function AboutSection() {
                   className="w-full gap-2"
                 >
                   <Download className="w-3.5 h-3.5 text-[var(--accent)]" />
-                  <span>Download Resume</span>
+                  <span>Resume</span>
                 </Button>
               </div>
             </div>

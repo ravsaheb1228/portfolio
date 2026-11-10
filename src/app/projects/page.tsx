@@ -14,9 +14,9 @@ export default function ProjectsPage() {
   return (
     <PageContainer>
       <SectionHeading
-        badge="Complete Portfolio"
-        title="Enterprise Software Suites & Applications"
-        subtitle="Explore all 10 mission-critical enterprise systems designed and engineered with modern web technologies, type safety, and business-focused architectures."
+        badge="Projects"
+        title="All Projects"
+        subtitle="Full-stack web applications, AI platforms, and modern enterprise software solutions."
       />
 
       <ProjectGrid projects={projectsData} enableFiltering={true} />

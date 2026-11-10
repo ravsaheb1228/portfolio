@@ -11,9 +11,9 @@ export function AchievementsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <SectionHeading
-            badge="Verified Credentials"
-            title="Education, Certifications & Milestones"
-            subtitle="Academic qualifications and certified proficiencies validating a deep technical foundation in Computer Science."
+            badge="Education"
+            title="Education & Certifications"
+            subtitle="Academic qualifications, certified technical courses, and achievements."
             className="mb-0 md:mb-0"
           />
 
@@ -23,7 +23,7 @@ export function AchievementsSection() {
             size="md"
             className="shrink-0 self-start md:self-auto gap-2"
           >
-            <span>View All Credentials</span>
+            <span>View All</span>
             <ArrowRight className="w-4 h-4" />
           </Button>
         </div>

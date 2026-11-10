@@ -8,9 +8,9 @@ export function ContactSection() {
     <section id="contact" className="py-20 sm:py-28 border-t border-(--border) bg-(--bg-base)">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          badge="Start a Project Discussion"
-          title="Have a Project in Mind? Let's Build Something Great."
-          subtitle="Whether you need a custom business application, a modern website, an enterprise dashboard or a complete software solution, let's discuss your requirements and turn your idea into reality."
+          badge="Contact"
+          title="Let's Work Together"
+          subtitle="Have a project in mind? Reach out and let's discuss your requirements."
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">

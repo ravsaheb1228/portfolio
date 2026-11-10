@@ -25,9 +25,9 @@ export default function AboutPage() {
   return (
     <PageContainer>
       <SectionHeading
-        badge="About Ravsaheb Khairnar"
-        title="Designing Intuitive Interfaces. Engineering Resilient Software Systems."
-        subtitle="A multidisciplinary software developer and UI/UX designer focused on building robust, high-performance web applications that solve real-world operational challenges."
+        badge="About"
+        title="About Me"
+        subtitle="Full-stack developer and UI/UX designer building robust, intuitive web applications."
       />
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">

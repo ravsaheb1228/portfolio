@@ -23,9 +23,9 @@ export function BusinessSolutionsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <SectionHeading
-            badge="Strategic Value"
-            title="Turning Business Challenges Into Powerful Digital Solutions."
-            subtitle="I engineer software focused on measurable outcomes: reducing payroll hours, preventing stock-outs, speeding up deal cycles, and automating manual workflows."
+            badge="Solutions"
+            title="Business Solutions"
+            subtitle="Tailored software systems engineered to streamline operations and automate workflows."
             className="mb-0 md:mb-0"
           />
 

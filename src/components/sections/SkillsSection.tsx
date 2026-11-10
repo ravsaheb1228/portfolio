@@ -34,9 +34,9 @@ export function SkillsSection() {
     <section className="py-20 sm:py-28 border-t border-(--border) bg-(--bg-base)">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          badge="Technical Stack"
-          title="Engineered With Modern, Enterprise-Grade Technologies"
-          subtitle="A comprehensive toolkit spanning user experience design, type-safe full-stack engineering, database modeling, and AI integration."
+          badge="Skills"
+          title="Technical Skills"
+          subtitle="Modern frontend, backend, database, and AI technologies used in production."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">

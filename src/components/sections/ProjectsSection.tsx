@@ -14,9 +14,9 @@ export function ProjectsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <SectionHeading
-            badge="Enterprise Software Showcase"
-            title="Business Solutions & Mission-Critical Applications"
-            subtitle="Architected to solve genuine organizational challenges: automating HRMS payroll, inventory reconciliation, CRM pipeline velocity, and ERP data silos."
+            badge="Featured Projects"
+            title="Projects & Work"
+            subtitle="Full-stack web applications, AI platforms, and modern software solutions."
             className="mb-0 md:mb-0"
           />
 
@@ -26,7 +26,7 @@ export function ProjectsSection() {
             size="md"
             className="shrink-0 self-start md:self-auto gap-2"
           >
-            <span>View All 10 Projects</span>
+            <span>All Projects</span>
             <ArrowRight className="w-4 h-4" />
           </Button>
         </div>

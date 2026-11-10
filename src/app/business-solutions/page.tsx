@@ -23,9 +23,9 @@ export default function BusinessSolutionsPage() {
   return (
     <PageContainer>
       <SectionHeading
-        badge="Enterprise Solutions"
-        title="Turning Business Challenges Into Powerful Digital Solutions."
-        subtitle="I build software designed around real business models—eliminating manual bottlenecks, standardizing multi-department data, and empowering executive decision makers."
+        badge="Solutions"
+        title="Business Solutions"
+        subtitle="Software systems built to streamline operations and eliminate manual bottlenecks."
       />
 
       <div className="space-y-16">

@@ -14,9 +14,9 @@ export default function ExperiencePage() {
     <div className="py-6">
       <PageContainer>
         <SectionHeading
-          badge="Career & Practice"
-          title="Professional Experience & Technical Domains"
-          subtitle="A comprehensive breakdown of design architecture and full-stack software engineering proficiencies."
+          badge="Experience"
+          title="Work Experience"
+          subtitle="Hands-on full-stack development, UI/UX architecture, and modern web applications."
         />
       </PageContainer>
       <ExperienceSection />

@@ -25,9 +25,9 @@ export function ExperienceSection() {
     <section className="py-20 sm:py-28 border-t border-(--border) bg-(--bg-surface)">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          badge="Applied Capabilities"
-          title="Professional Experience & Technical Competencies"
-          subtitle="A clear separation between UI/UX design architecture and full-stack software development disciplines."
+          badge="Experience"
+          title="Professional Experience"
+          subtitle="Hands-on full-stack development, UI/UX architecture, and modern web technologies."
         />
 
         {/* Category Selector Tabs */}

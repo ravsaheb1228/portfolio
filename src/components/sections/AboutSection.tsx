@@ -17,9 +17,9 @@ export function AboutSection() {
     <section className="py-20 sm:py-28 border-t border-(--border) bg-(--bg-base)">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          badge="Professional Background"
-          title="Bridging Intuitive User Experience & Scalable Software Engineering."
-          subtitle="A disciplined Computer Science background paired with practical product design and modern full-stack development."
+          badge="About"
+          title="About Me"
+          subtitle="Computer Science professional focused on modern full-stack development and intuitive UI/UX design."
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">

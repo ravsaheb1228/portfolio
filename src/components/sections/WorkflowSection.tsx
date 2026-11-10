@@ -9,9 +9,9 @@ export function WorkflowSection() {
     <section className="py-20 sm:py-28 border-t border-(--border) bg-(--bg-base)">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          badge="Execution Methodology"
-          title="A Structured, Transparent Development Workflow"
-          subtitle="From initial discovery to continuous maintenance, every project follows a battle-tested roadmap designed to eliminate scope ambiguity and deliver on schedule."
+          badge="Process"
+          title="Workflow"
+          subtitle="A structured, transparent roadmap from concept to deployment."
           align="center"
         />
 

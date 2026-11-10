@@ -34,9 +34,9 @@ export function WhyWorkWithMeSection() {
     <section className="py-20 sm:py-28 border-t border-(--border) bg-(--bg-surface)">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          badge="Client Value"
-          title="Why Work With Me?"
-          subtitle="Honest, high-caliber execution combining product design precision with production-tested software engineering."
+          badge="Why Me"
+          title="Why Work With Me"
+          subtitle="Clean code, modern UI/UX design, and transparent communication."
           align="center"
         />
 

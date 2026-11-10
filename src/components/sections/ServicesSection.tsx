@@ -51,9 +51,9 @@ export function ServicesSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <SectionHeading
-            badge="Engineering Services"
-            title="Full-Lifecycle Design & Development Services"
-            subtitle="From early wireframing to full-stack code, API integrations, and cloud deployments—engineered for business growth."
+            badge="Services"
+            title="Services"
+            subtitle="Full-lifecycle UI/UX design and scalable web development services."
             className="mb-0 md:mb-0"
           />
 
@@ -63,7 +63,7 @@ export function ServicesSection() {
             size="md"
             className="shrink-0 self-start md:self-auto gap-2"
           >
-            <span>View All Services</span>
+            <span>All Services</span>
             <ArrowRight className="w-4 h-4" />
           </Button>
         </div>

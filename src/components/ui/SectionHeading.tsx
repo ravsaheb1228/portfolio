@@ -1,5 +1,4 @@
 import React from "react";
-import { Badge } from "./Badge";
 import { cn } from "@/lib/utils";
 
 interface SectionHeadingProps {
@@ -20,21 +19,26 @@ export function SectionHeading({
   return (
     <div
       className={cn(
-        "flex flex-col mb-12 md:mb-16",
-        align === "center" ? "items-center text-center max-w-3xl mx-auto" : "max-w-3xl",
+        "flex flex-col mb-8 md:mb-12",
+        align === "center"
+          ? "items-center text-center max-w-2xl mx-auto"
+          : "items-start text-left max-w-2xl",
         className
       )}
     >
       {badge && (
-        <Badge variant="accent" className="mb-3.5 uppercase tracking-wider text-[11px] font-semibold">
-          {badge}
-        </Badge>
+        <div className="w-fit inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-indigo-500/25 bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-xs font-mono font-semibold uppercase tracking-wider mb-3 shadow-xs">
+          <span className="w-1.5 h-1.5 rounded-full bg-indigo-500" />
+          <span>{badge}</span>
+        </div>
       )}
-      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-(--text-primary)">
+
+      <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-(--text-primary) leading-tight">
         {title}
       </h2>
+
       {subtitle && (
-        <p className="mt-3.5 text-base sm:text-lg text-(--text-secondary) leading-relaxed font-normal">
+        <p className="mt-2 text-sm sm:text-base text-(--text-secondary) leading-relaxed font-normal max-w-xl">
           {subtitle}
         </p>
       )}

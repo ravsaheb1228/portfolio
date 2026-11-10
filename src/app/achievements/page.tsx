@@ -22,9 +22,9 @@ export default function AchievementsPage() {
   return (
     <PageContainer>
       <SectionHeading
-        badge="Academic & Professional Credentials"
-        title="Education, Certifications & Engineering Milestones"
-        subtitle="Verified qualifications reflecting deep academic foundations in Computer Science and continuous commitment to technical excellence."
+        badge="Education"
+        title="Education & Credentials"
+        subtitle="Academic degrees, certified technical courses, and milestones."
       />
 
       <div className="space-y-12">

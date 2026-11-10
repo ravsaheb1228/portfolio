@@ -56,9 +56,9 @@ export default function ServicesPage() {
   return (
     <PageContainer>
       <SectionHeading
-        badge="Services & Technical Offerings"
-        title="High-Caliber Design & Full-Stack Software Engineering"
-        subtitle="End-to-end capabilities designed to take your digital products from conceptual wireframes to scalable, secure production deployments."
+        badge="Services"
+        title="Services & Capabilities"
+        subtitle="UI/UX design, full-stack web development, and cloud software engineering."
       />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

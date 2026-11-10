@@ -16,9 +16,9 @@ export default function ContactPage() {
   return (
     <PageContainer>
       <SectionHeading
-        badge="Direct Project Inquiry"
-        title="Have a Project in Mind? Let's Build Something Great."
-        subtitle="Whether you need a custom business application, a modern website, an enterprise dashboard or a complete software solution, let's discuss your requirements and turn your idea into reality."
+        badge="Contact"
+        title="Let's Work Together"
+        subtitle="Have a project in mind? Reach out and let's discuss your requirements."
       />
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
@@ -39,19 +39,19 @@ export default function ContactPage() {
               <div className="flex items-start gap-2.5">
                 <Clock className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" />
                 <span>
-                  <strong>24-Hour Response Time:</strong> Every inquiry receives a personal, thoughtful response within one business day.
+                  <strong>Guaranteed Rapid Response:</strong> Same-day replies (typically under 4 hours) for active inquiries.
                 </span>
               </div>
               <div className="flex items-start gap-2.5">
                 <Shield className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
                 <span>
-                  <strong>Strict Confidentiality:</strong> Your project ideas, internal business details, and trade secrets are kept 100% confidential.
+                  <strong>Code Ownership & Security:</strong> Complete source code handover, comprehensive documentation, and strict NDA compliance.
                 </span>
               </div>
               <div className="flex items-start gap-2.5">
-                <Sparkles className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
+                <Sparkles className="w-4 h-4 text-purple-500 shrink-0 mt-0.5" />
                 <span>
-                  <strong>No Pushy Sales:</strong> Honest technical recommendations regarding feasibility, timeline estimates, and budget fit.
+                  <strong>Design-Led Engineering:</strong> Pixel-perfect Figma implementations coupled with type-safe backend architectures.
                 </span>
               </div>
             </div>

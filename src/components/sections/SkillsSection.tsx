@@ -1,6 +1,8 @@
 import React from "react";
 import { skillsData } from "@/data/skills";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { ScrollSection } from "@/components/ui/ScrollSection";
+import { StaggerContainer, StaggerItem } from "@/components/ui/AnimatedReveal";
 import { Card } from "@/components/ui/Card";
 import {
   Code,
@@ -31,20 +33,22 @@ export function SkillsSection() {
   };
 
   return (
-    <section className="py-20 sm:py-28 border-t border-(--border) bg-(--bg-base)">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          badge="Skills"
-          title="Technical Skills"
-          subtitle="Modern frontend, backend, database, and AI technologies used in production."
-        />
+    <ScrollSection surface="base" prevSurface="surface" accent="cyan">
+      <SectionHeading
+        badge="Skills"
+        title="Technical Skills"
+        subtitle="Modern frontend, backend, database, and AI technologies used in production."
+      />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {skillsData.map((category) => (
+      <StaggerContainer
+        staggerDelay={0.07}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+      >
+        {skillsData.map((category) => (
+          <StaggerItem key={category.id}>
             <Card
-              key={category.id}
               hoverEffect
-              className="p-6 flex flex-col justify-between"
+              className="p-6 flex flex-col justify-between h-full"
             >
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
@@ -66,7 +70,7 @@ export function SkillsSection() {
                   {category.skills.map((skill, idx) => (
                     <div
                       key={idx}
-                      className="group/pill inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium border border-(--border) bg-(--bg-elevated) text-(--text-primary) hover:border-(--accent) hover:bg-(--accent-subtle) transition-colors"
+                      className="group/pill inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium border border-(--border) bg-(--bg-elevated) text-(--text-primary) hover:border-(--accent) hover:bg-(--accent-subtle) hover:-translate-y-0.5 transition-all duration-200"
                     >
                       <span>{skill.name}</span>
                       {skill.tag && (
@@ -79,9 +83,9 @@ export function SkillsSection() {
                 </div>
               </div>
             </Card>
-          ))}
-        </div>
-      </div>
-    </section>
+          </StaggerItem>
+        ))}
+      </StaggerContainer>
+    </ScrollSection>
   );
 }

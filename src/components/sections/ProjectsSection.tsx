@@ -1,6 +1,12 @@
 import React from "react";
 import { projectsData } from "@/data/projects";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { ScrollSection } from "@/components/ui/ScrollSection";
+import {
+  AnimatedReveal,
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/ui/AnimatedReveal";
 import { ProjectCard } from "@/components/projects/ProjectCard";
 import { Button } from "@/components/ui/Button";
 import { ArrowRight, Layers } from "lucide-react";
@@ -10,16 +16,16 @@ export function ProjectsSection() {
   const featuredProjects = projectsData.slice(0, 6);
 
   return (
-    <section className="py-20 sm:py-28 border-t border-(--border) bg-(--bg-surface)">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
-          <SectionHeading
-            badge="Featured Projects"
-            title="Projects & Work"
-            subtitle="Full-stack web applications, AI platforms, and modern software solutions."
-            className="mb-0 md:mb-0"
-          />
+    <ScrollSection surface="surface" prevSurface="base" accent="violet">
+      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+        <SectionHeading
+          badge="Featured Projects"
+          title="Projects & Work"
+          subtitle="Full-stack web applications, AI platforms, and modern software solutions."
+          className="mb-0 md:mb-0"
+        />
 
+        <AnimatedReveal direction="left" delay={0.1}>
           <Button
             href="/projects"
             variant="outline"
@@ -29,15 +35,22 @@ export function ProjectsSection() {
             <span>All Projects</span>
             <ArrowRight className="w-4 h-4" />
           </Button>
-        </div>
+        </AnimatedReveal>
+      </div>
 
-        {/* 6 Grid items */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {featuredProjects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
-        </div>
+      {/* 6 Grid items */}
+      <StaggerContainer
+        staggerDelay={0.08}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+      >
+        {featuredProjects.map((project) => (
+          <StaggerItem key={project.id} className="flex">
+            <ProjectCard project={project} />
+          </StaggerItem>
+        ))}
+      </StaggerContainer>
 
+      <AnimatedReveal direction="up" delay={0.12}>
         <div className="mt-14 p-6 rounded-2xl border border-(--border) bg-(--bg-elevated) flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3 text-center sm:text-left">
             <div className="p-3 rounded-xl bg-blue-500/10 text-blue-500">
@@ -56,7 +69,7 @@ export function ProjectsSection() {
             Request Architecture Consultation
           </Button>
         </div>
-      </div>
-    </section>
+      </AnimatedReveal>
+    </ScrollSection>
   );
 }

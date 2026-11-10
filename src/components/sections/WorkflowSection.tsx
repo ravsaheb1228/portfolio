@@ -1,29 +1,34 @@
 import React from "react";
 import { workflowData } from "@/data/workflow";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { ScrollSection } from "@/components/ui/ScrollSection";
+import { StaggerContainer, StaggerItem } from "@/components/ui/AnimatedReveal";
 import { Card } from "@/components/ui/Card";
 import { CheckCircle2 } from "lucide-react";
 
 export function WorkflowSection() {
   return (
-    <section className="py-20 sm:py-28 border-t border-(--border) bg-(--bg-base)">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          badge="Process"
-          title="Workflow"
-          subtitle="A structured, transparent roadmap from concept to deployment."
-          align="center"
-        />
+    <ScrollSection surface="base" prevSurface="surface" accent="indigo">
+      <SectionHeading
+        badge="Process"
+        title="Workflow"
+        subtitle="A structured, transparent roadmap from concept to deployment."
+        align="center"
+      />
 
-        {/* 7-Step Sequential Process Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
-          {workflowData.map((stage, idx) => (
+      {/* 7-Step Sequential Process Cards */}
+      <StaggerContainer
+        staggerDelay={0.07}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative"
+      >
+        {workflowData.map((stage, idx) => (
+          <StaggerItem
+            key={stage.step}
+            className={idx === 6 ? "lg:col-span-2" : ""}
+          >
             <Card
-              key={stage.step}
               hoverEffect
-              className={`p-6 flex flex-col justify-between ${
-                idx === 6 ? "lg:col-span-2" : ""
-              }`}
+              className="p-6 flex flex-col justify-between h-full"
             >
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
@@ -61,9 +66,9 @@ export function WorkflowSection() {
                 </div>
               </div>
             </Card>
-          ))}
-        </div>
-      </div>
-    </section>
+          </StaggerItem>
+        ))}
+      </StaggerContainer>
+    </ScrollSection>
   );
 }

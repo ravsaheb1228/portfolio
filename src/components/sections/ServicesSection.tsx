@@ -2,6 +2,12 @@ import React from "react";
 import Link from "next/link";
 import { servicesData } from "@/data/services";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { ScrollSection } from "@/components/ui/ScrollSection";
+import {
+  AnimatedReveal,
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/ui/AnimatedReveal";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import {
@@ -47,16 +53,16 @@ export function ServicesSection() {
   };
 
   return (
-    <section className="py-20 sm:py-28 border-t border-(--border) bg-(--bg-surface)">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
-          <SectionHeading
-            badge="Services"
-            title="Services"
-            subtitle="Full-lifecycle UI/UX design and scalable web development services."
-            className="mb-0 md:mb-0"
-          />
+    <ScrollSection surface="surface" prevSurface="base" accent="blue">
+      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+        <SectionHeading
+          badge="Services"
+          title="Services"
+          subtitle="Full-lifecycle UI/UX design and scalable web development services."
+          className="mb-0 md:mb-0"
+        />
 
+        <AnimatedReveal direction="left" delay={0.1}>
           <Button
             href="/services"
             variant="outline"
@@ -66,14 +72,18 @@ export function ServicesSection() {
             <span>All Services</span>
             <ArrowRight className="w-4 h-4" />
           </Button>
-        </div>
+        </AnimatedReveal>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {servicesData.slice(0, 6).map((service) => (
+      <StaggerContainer
+        staggerDelay={0.07}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+      >
+        {servicesData.slice(0, 6).map((service) => (
+          <StaggerItem key={service.id}>
             <Card
-              key={service.id}
               hoverEffect
-              className="p-6 sm:p-7 flex flex-col justify-between"
+              className="p-6 sm:p-7 flex flex-col justify-between h-full"
             >
               <div className="space-y-4">
                 <div className="p-3 w-fit rounded-xl border border-(--border) bg-(--bg-elevated)">
@@ -117,9 +127,9 @@ export function ServicesSection() {
                 </Link>
               </div>
             </Card>
-          ))}
-        </div>
-      </div>
-    </section>
+          </StaggerItem>
+        ))}
+      </StaggerContainer>
+    </ScrollSection>
   );
 }

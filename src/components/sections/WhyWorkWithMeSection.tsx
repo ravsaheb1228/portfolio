@@ -1,6 +1,8 @@
 import React from "react";
 import { whyWorkWithMeData } from "@/data/whyWorkWithMe";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { ScrollSection } from "@/components/ui/ScrollSection";
+import { StaggerContainer, StaggerItem } from "@/components/ui/AnimatedReveal";
 import { Card } from "@/components/ui/Card";
 import {
   Compass,
@@ -31,21 +33,23 @@ export function WhyWorkWithMeSection() {
   };
 
   return (
-    <section className="py-20 sm:py-28 border-t border-(--border) bg-(--bg-surface)">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          badge="Why Me"
-          title="Why Work With Me"
-          subtitle="Clean code, modern UI/UX design, and transparent communication."
-          align="center"
-        />
+    <ScrollSection surface="surface" prevSurface="base" accent="violet">
+      <SectionHeading
+        badge="Why Me"
+        title="Why Work With Me"
+        subtitle="Clean code, modern UI/UX design, and transparent communication."
+        align="center"
+      />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {whyWorkWithMeData.map((item) => (
+      <StaggerContainer
+        staggerDelay={0.07}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+      >
+        {whyWorkWithMeData.map((item) => (
+          <StaggerItem key={item.number}>
             <Card
-              key={item.number}
               hoverEffect
-              className="p-6 sm:p-7 flex flex-col justify-between"
+              className="p-6 sm:p-7 flex flex-col justify-between h-full"
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
@@ -66,9 +70,9 @@ export function WhyWorkWithMeSection() {
                 </p>
               </div>
             </Card>
-          ))}
-        </div>
-      </div>
-    </section>
+          </StaggerItem>
+        ))}
+      </StaggerContainer>
+    </ScrollSection>
   );
 }

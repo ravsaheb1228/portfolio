@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
+import { MotionProvider } from "@/components/motion/MotionProvider";
+import { DarkCursorGlow } from "@/components/motion/DarkCursorGlow";
+import { ScrollProgressBar } from "@/components/motion/ScrollProgressBar";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
@@ -75,10 +78,14 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange={false}
         >
-          <Navbar />
-          <main className="flex-1">{children}</main>
-          <Footer />
-          <WhatsAppButton />
+          <MotionProvider>
+            <ScrollProgressBar />
+            <DarkCursorGlow />
+            <Navbar />
+            <main className="flex-1">{children}</main>
+            <Footer />
+            <WhatsAppButton />
+          </MotionProvider>
         </ThemeProvider>
       </body>
     </html>

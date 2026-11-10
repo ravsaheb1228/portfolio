@@ -4,6 +4,7 @@ import { personalData } from "@/data/personal";
 import { footerNavItems, projectInquiryCategories } from "@/data/navigation";
 import { servicesData } from "@/data/services";
 import { Button } from "@/components/ui/Button";
+import { AnimatedReveal } from "@/components/ui/AnimatedReveal";
 import {
   Mail,
   ArrowRight,
@@ -15,10 +16,16 @@ export function Footer() {
   const currentYear = 2026;
 
   return (
-    <footer className="border-t border-(--border) bg-(--bg-surface) text-(--text-primary) transition-colors duration-200">
+    <footer className="relative overflow-x-clip bg-(--bg-surface) text-(--text-primary) transition-colors duration-200">
+      {/* Ambient scroll-in aura transition instead of flat border line */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[min(90vw,820px)] h-28 bg-linear-to-r from-blue-500/15 via-indigo-500/20 to-purple-500/15 blur-3xl -translate-y-1/2"
+      />
+
       {/* Pre-footer Call to Action Banner */}
-      <div className="border-b border-(--border) bg-linear-to-b from-(--bg-base) to-(--bg-surface) py-14 sm:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative bg-linear-to-b from-(--bg-base) via-(--bg-base)/70 to-(--bg-surface) py-16 sm:py-22">
+        <AnimatedReveal direction="up" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20 mb-4">
             <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
             Open for New Projects & Collaborations
@@ -44,7 +51,7 @@ export function Footer() {
               Download Resume
             </Button>
           </div>
-        </div>
+        </AnimatedReveal>
       </div>
 
       {/* Main Footer Links Directory */}

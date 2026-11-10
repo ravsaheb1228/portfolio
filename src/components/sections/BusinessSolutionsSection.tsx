@@ -81,7 +81,7 @@ export function BusinessSolutionsSection() {
 
           {/* Active Solution Deep Dive Panel */}
           <div className="lg:col-span-7">
-            <Card className="p-6 sm:p-8 space-y-6 border-(--border-strong) shadow-xl bg-(--bg-surface)">
+            <Card className="p-6 sm:p-8 space-y-6 border-(--border-strong) bg-(--bg-surface)">
               {/* Header */}
               <div className="flex flex-wrap items-center justify-between gap-2 pb-4 border-b border-(--border)">
                 <div>
@@ -98,7 +98,7 @@ export function BusinessSolutionsSection() {
               </div>
 
               {/* Mockup Preview */}
-              <div className="rounded-xl border border-(--border) overflow-hidden bg-(--bg-elevated) p-3">
+              <div className="rounded-xl border border-(--border) bg-(--bg-elevated) p-3 sm:p-4">
                 <DashboardMockup
                   type={activeSolution.mockupType}
                   title={`${activeSolution.title} Console`}

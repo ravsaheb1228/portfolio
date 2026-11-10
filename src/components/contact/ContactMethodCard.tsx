@@ -37,7 +37,7 @@ export function ContactMethodCard() {
 
   return (
     <div className="space-y-4">
-      <div className="p-5 rounded-2xl border border-(--border) bg-(--bg-surface)">
+      <div className="p-5 rounded-2xl border border-(--border) bg-(--bg-surface) shadow-(--card-shadow)">
         <h4 className="text-sm font-bold uppercase tracking-wider text-(--text-primary) mb-1 font-mono">
           Direct Channels
         </h4>

@@ -94,14 +94,14 @@ export default async function ProjectDetailPage({ params }: PageProps) {
       </div>
 
       {/* Main Interactive Visual Mockup */}
-      <div className="mb-12 rounded-2xl border border-(--border-strong) bg-(--bg-elevated) p-4 sm:p-6 shadow-2xl">
+      <div className="mb-12 rounded-2xl border border-(--border) bg-(--bg-elevated) p-4 sm:p-6 shadow-(--card-shadow)">
         <DashboardMockup
           type={project.mockupType}
           title={`${project.title} System Console`}
           badge={project.status}
           className="w-full"
         />
-        <div className="mt-3 text-center text-[11px] font-mono text-(--text-muted)">
+        <div className="mt-3.5 text-center text-[11px] font-mono text-(--text-muted)">
           Conceptual High-Density Interface Blueprint & Architecture Preview
         </div>
       </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { cn } from "@/lib/utils";
 import {
   Search,
   FileText,
@@ -32,7 +33,10 @@ export function DashboardMockup({
 }: DashboardMockupProps) {
   return (
     <div
-      className={`rounded-2xl border border-(--border-strong) bg-(--bg-surface) shadow-2xl overflow-hidden font-sans text-xs select-none ${className}`}
+      className={cn(
+        "rounded-2xl border border-(--border-strong)/80 bg-(--bg-surface) shadow-sm overflow-hidden font-sans text-xs select-none",
+        className
+      )}
     >
       {/* Top Application Bar - Clean macOS styling like Image 1 */}
       <div className="flex items-center justify-between px-3 sm:px-4 py-2 sm:py-2.5 border-b border-(--border) bg-(--bg-elevated)/80 backdrop-blur-md gap-2">

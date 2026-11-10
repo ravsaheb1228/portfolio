@@ -33,7 +33,7 @@ export default function BusinessSolutionsPage() {
           <div
             key={solution.id}
             id={solution.slug}
-            className="scroll-mt-24 p-6 sm:p-10 rounded-2xl border border-(--border) bg-(--bg-surface) shadow-lg space-y-8"
+            className="scroll-mt-24 p-6 sm:p-10 rounded-2xl border border-(--border) bg-(--bg-surface) shadow-(--card-shadow) space-y-8"
           >
             {/* Header */}
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-6 border-b border-(--border)">

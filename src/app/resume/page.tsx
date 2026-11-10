@@ -133,7 +133,7 @@ export default function ResumePage() {
               <span className="text-xs text-(--text-muted)">1 Page • Verified</span>
             </div>
 
-            <div className="relative rounded-2xl overflow-hidden border border-(--border-strong) bg-(--bg-surface) shadow-xl min-h-[650px] sm:min-h-[850px] flex flex-col">
+            <div className="relative rounded-2xl overflow-hidden border border-(--border-strong) bg-(--bg-surface) shadow-(--card-shadow) min-h-[650px] sm:min-h-[850px] flex flex-col">
               <iframe
                 src="/resume.pdf#toolbar=0&navpanes=0&scrollbar=1"
                 title="Ravsaheb Khairnar Resume"

@@ -22,7 +22,7 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
   return (
     <Card
       hoverEffect
-      className={`group flex flex-col justify-between overflow-hidden rounded-2xl border border-(--border) bg-(--bg-surface) hover:border-indigo-500/40 hover:shadow-xl transition-all duration-300 ${
+      className={`group flex flex-col justify-between overflow-hidden rounded-2xl border border-(--border) bg-(--bg-surface) transition-all duration-300 ${
         featured ? "lg:col-span-2" : ""
       }`}
     >
@@ -33,7 +33,7 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
             type={project.mockupType}
             title={project.title}
             badge={project.status}
-            className="transform group-hover:scale-[1.015] transition-transform duration-300 shadow-md"
+            className="transform group-hover:scale-[1.015] transition-transform duration-300"
           />
         </div>
 

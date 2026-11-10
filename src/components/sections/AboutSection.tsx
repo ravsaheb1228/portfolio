@@ -25,9 +25,9 @@ export function AboutSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Column: Portrait & Credentials Box */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="relative rounded-2xl border border-(--border-strong) bg-linear-to-b from-(--bg-elevated) to-(--bg-surface) p-6 sm:p-8 overflow-hidden shadow-xl">
+            <div className="relative rounded-2xl border border-(--border-strong) bg-linear-to-b from-(--bg-elevated) to-(--bg-surface) p-6 sm:p-8 overflow-hidden shadow-(--card-shadow)">
               {/* Profile Photo Visual */}
-              <div className="relative w-36 h-36 sm:w-44 sm:h-44 mx-auto rounded-full p-1 bg-linear-to-tr from-blue-600 via-indigo-600 to-cyan-400 shadow-2xl">
+              <div className="relative w-36 h-36 sm:w-44 sm:h-44 mx-auto rounded-full p-1 bg-linear-to-tr from-blue-600 via-indigo-600 to-cyan-400 shadow-lg shadow-indigo-500/20">
                 <Image
                   src={personalData.avatar}
                   alt={personalData.name}

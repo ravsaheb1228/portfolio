@@ -92,7 +92,7 @@ export function ProjectInquiryForm() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="p-6 sm:p-8 rounded-2xl border border-(--border) bg-(--bg-surface) shadow-xl space-y-5"
+      className="p-6 sm:p-8 rounded-2xl border border-(--border) bg-(--bg-surface) shadow-(--card-shadow) space-y-5"
       noValidate
     >
       <div className="flex items-center justify-between pb-2 border-b border-(--border)">

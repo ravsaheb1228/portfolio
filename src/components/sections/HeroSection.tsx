@@ -120,7 +120,7 @@ export function HeroSection() {
             {/* Central Layered Container */}
             <div className="relative">
               {/* Floating Pill Top Left: Clerio-style Metric */}
-              <div className="absolute -top-5 -left-4 z-20 hidden sm:flex items-center gap-2.5 px-3.5 py-2 rounded-2xl border border-indigo-500/20 bg-(--bg-surface)/95 shadow-xl backdrop-blur-md animate-float-1">
+              <div className="absolute -top-5 -left-4 z-20 hidden sm:flex items-center gap-2.5 px-3.5 py-2 rounded-2xl border border-indigo-500/20 bg-(--bg-surface)/95 shadow-lg shadow-indigo-950/10 dark:shadow-black/50 backdrop-blur-md animate-float-1">
                 <div className="w-7 h-7 rounded-xl bg-indigo-500/10 text-indigo-500 flex items-center justify-center shrink-0">
                   <TrendingUp className="w-4 h-4" />
                 </div>
@@ -134,7 +134,7 @@ export function HeroSection() {
               </div>
 
               {/* Floating Pill Top Right: AI Co-Pilot Widget */}
-              <div className="absolute -top-5 -right-3 z-20 hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-2xl border border-purple-500/20 bg-(--bg-surface)/95 shadow-xl backdrop-blur-md animate-float-2">
+              <div className="absolute -top-5 -right-3 z-20 hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-2xl border border-purple-500/20 bg-(--bg-surface)/95 shadow-lg shadow-indigo-950/10 dark:shadow-black/50 backdrop-blur-md animate-float-2">
                 <div className="w-6 h-6 rounded-lg bg-linear-to-tr from-indigo-600 to-purple-600 text-white flex items-center justify-center shrink-0 shadow-sm">
                   <Sparkles className="w-3.5 h-3.5" />
                 </div>
@@ -149,11 +149,11 @@ export function HeroSection() {
                 type="dashboard"
                 title="Enterprise Operational Console"
                 badge="Production Ready"
-                className="shadow-2xl shadow-indigo-950/20"
+                className="shadow-xl shadow-indigo-950/12 dark:shadow-black/60"
               />
 
               {/* Floating Card Bottom Left: Ravsaheb Portrait & Status */}
-              <div className="absolute -bottom-5 -left-4 z-20 hidden sm:flex items-center gap-3 px-3.5 py-2.5 rounded-2xl border border-(--border-strong) bg-(--bg-surface)/95 shadow-xl backdrop-blur-md animate-float-3">
+              <div className="absolute -bottom-5 -left-4 z-20 hidden sm:flex items-center gap-3 px-3.5 py-2.5 rounded-2xl border border-(--border-strong) bg-(--bg-surface)/95 shadow-lg shadow-indigo-950/10 dark:shadow-black/50 backdrop-blur-md animate-float-3">
                 <div className="relative w-9 h-9 rounded-full overflow-hidden border border-blue-500/40 shrink-0">
                   <Image
                     src={personalData.avatar}
@@ -171,7 +171,7 @@ export function HeroSection() {
               </div>
 
               {/* Floating Pill Bottom Right: Architecture Quality */}
-              <div className="absolute -bottom-5 -right-3 z-20 hidden sm:flex items-center gap-2 px-3 py-2 rounded-2xl border border-blue-500/20 bg-(--bg-surface)/95 shadow-xl backdrop-blur-md animate-float-4">
+              <div className="absolute -bottom-5 -right-3 z-20 hidden sm:flex items-center gap-2 px-3 py-2 rounded-2xl border border-blue-500/20 bg-(--bg-surface)/95 shadow-lg shadow-indigo-950/10 dark:shadow-black/50 backdrop-blur-md animate-float-4">
                 <div className="w-6 h-6 rounded-lg bg-blue-500/10 text-blue-500 flex items-center justify-center shrink-0">
                   <ShieldCheck className="w-3.5 h-3.5" />
                 </div>

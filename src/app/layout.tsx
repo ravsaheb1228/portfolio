@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
 import { MotionProvider } from "@/components/motion/MotionProvider";
-import { DarkCursorGlow } from "@/components/motion/DarkCursorGlow";
 import { ScrollProgressBar } from "@/components/motion/ScrollProgressBar";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -80,7 +79,6 @@ export default function RootLayout({
         >
           <MotionProvider>
             <ScrollProgressBar />
-            <DarkCursorGlow />
             <Navbar />
             <main className="flex-1">{children}</main>
             <Footer />
